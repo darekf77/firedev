@@ -1,0 +1,5 @@
+/node_modules
+/dist
+/browser
+/tmp*
+npm-debug.log*

@@ -1,60 +1,27 @@
 {
   "tnp": {
-    "resources": [
-      "README.md",
-      "projects",
-      "bin",
-      "logo_github.png",
-      "logo.png",
-      "files.png"
-    ],
+    "resources": [],
     "type": "isomorphic-lib",
     "overrided": {
-      "ignoreDepsPattern": [
-        "@angular.*"
-      ],
       "dependencies": {
-        "@ngx-formly/core": "4",
-        "@angular/core": "5",
-        "rxjs": "^5.5.6",
-        "flatted": "^2.0.0",
-        "@types/json-stringify-safe": "^5.0.0",
-        "firedev": "2.0.62"
-      },
-      "includeAsDev": [],
-      "includeOnly": []
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.1.1",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-es2015": "^6.24.1",
+        "ts-loader": "^2.3.1",
+        "@types/jasmine": null,
+        "@types/jasminewd2": null,
+        "@types/mocha": null,
+        "ts-sinon": null
+      }
     }
   },
-  "name": "firedev",
-  "version": "2.0.61",
-  "description": "Isofiredevc solution for expressjs and angular5",
-  "main": "index.js",
   "scripts": {
-    "release:patch": "npm version patch && tnp clear:bundle && tnp build:bundle && tnp --copy-resources && cd bundle && npm publish && cd .. && git push origin master && echo \"done\"",
-    "build:watch": "npm-run watch \"firedev build\" src",
-    "build": "./node_modules/.bin/ts-node ./node_modules/typescript-npm-project/index.ts",
-    "build:publish": "./node_modules/.bin/ts-node ./node_modules/typescript-npm-project/index.ts --publish",
-    "build:clean": "./node_modules/.bin/ts-node ./node_modules/typescript-npm-project/index.ts --clean",
-    "test": "mocha -r ts-node/register src/tests/**/*.ts",
-    "test:watch": "mocha  -r ts-node/register --watch  src/**/*.spec.ts --watch-extensions ts"
+    "start": "webpack-dev-server --config webpack.config.js"
   },
-  "bin": {
-    "firedev": "bin/firedev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/darekf77/firedev.git"
-  },
-  "author": "Dariusz Filipiak",
-  "bugs": {
-    "url": "https://github.com/darekf77/firedev/issues"
-  },
-  "homepage": "https://github.com/darekf77/firedev#readme",
-  "husky": {
-    "hooks": {
-      "pre-push": "tnp deps:show:if:standalone"
-    }
-  },
+  "name": "super-simple-morphi-example",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "9.3.0",
     "gulp": "^3.9.1",
@@ -66,8 +33,23 @@
     "webpack": "3.10.0"
   },
   "dependencies": {
-    "@angular/core": "5",
-    "@ngx-formly/core": "4",
+    "@angular-devkit/build-optimizer": "^0.3.1",
+    "@angular-devkit/schematics": "^0.0.42",
+    "@angular/animations": "5.2.0",
+    "@angular/cdk": "^5.2.5",
+    "@angular/cli": "~1.6.8",
+    "@angular/common": "5.2.0",
+    "@angular/compiler": "5.2.0",
+    "@angular/compiler-cli": "~5.1.0",
+    "@angular/core": "5.2.0",
+    "@angular/forms": "5.2.0",
+    "@angular/http": "5.2.0",
+    "@angular/language-service": "~5.1.0",
+    "@angular/material": "^5.2.5",
+    "@angular/platform-browser": "5.2.0",
+    "@angular/platform-browser-dynamic": "5.2.0",
+    "@angular/router": "5.2.0",
+    "@types/bcrypt": "^1.0.0",
     "@types/chai": "^4.1.2",
     "@types/chokidar": "2.1.3",
     "@types/dateformat": "^1.0.1",
@@ -84,9 +66,10 @@
     "@types/lockfile": "^1.0.0",
     "@types/lodash": "4.14.92",
     "@types/lowdb": "^1.0.6",
-    "@types/mocha": "^5.2.5",
     "@types/node-notifier": "0.0.28",
     "@types/oauth2orize": "^1.8.0",
+    "@types/passport": "^0.3.3",
+    "@types/passport-http-bearer": "^1.0.30",
     "@types/password-hash": "^1.2.19",
     "@types/progress": "^2.0.3",
     "@types/q": "^1.0.3",
@@ -95,15 +78,16 @@
     "@types/socket.io": "^1.4.31",
     "@types/socket.io-client": "^1.4.32",
     "@types/systeminformation": "^3.23.0",
+    "@types/validator": "^6.2.2",
     "@types/vinyl": "^2.0.2",
     "@types/watch": "^1.0.0",
     "accepts": "^1.3.4",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
-    "bcrypt": "3.0.6",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "callsite-record": "4.1.3",
     "chai": "^4.2.0",
@@ -128,7 +112,6 @@
     "express-fileupload": "^0.4.0",
     "fbgraph": "^1.4.1",
     "fkill": "6.1.0",
-    "flatted": "^2.0.0",
     "fs-extra": "^5.0.0",
     "fuzzy": "^0.1.3",
     "glob": "^7.1.2",
@@ -150,8 +133,9 @@
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
+    "morphi": "2.0.52",
     "ng2-logger": "2.0.48",
-    "ng2-rest": "9.2.26",
+    "ng2-rest": "9.2.20",
     "node-notifier": "^5.3.0",
     "nodemon": "^1.14.11",
     "npm-get-dependents": "^1.0.1",
@@ -161,7 +145,7 @@
     "passport": "^0.3.2",
     "passport-http-bearer": "^1.0.1",
     "password-hash": "^1.2.2",
-    "portfinder": "1.0.21",
+    "portfinder": "^1.0.13",
     "progress": "^2.0.3",
     "prompts": "^0.1.8",
     "ps-list": "6.1.0",
@@ -170,13 +154,13 @@
     "randomcolor": "^0.5.3",
     "redbird": "^0.7.0",
     "rimraf": "^2.6.2",
-    "rxjs": "^5.5.6",
+    "rxjs": "5.5.6",
     "simple-git": "^1.96.0",
     "sleep": "^5.2.3",
     "sloc": "^0.2.0",
     "socket.io": "^2.0.4",
     "sort-package-json": "^1.11.0",
-    "sqlite3": "4.0.9",
+    "sqlite3": "^3.1.13",
     "sw-toolbox": "^3.6.0",
     "systeminformation": "^3.45.7",
     "ts-loader": "^2.3.1",
@@ -189,6 +173,9 @@
     "webpack-dev-server": "~2.9.3",
     "zone.js": "0.8.20"
   },
-  "license": "MIT",
-  "private": false
+  "husky": {
+    "hooks": {
+      "pre-push": "tnp deps:show:if:standalone"
+    }
+  }
 }
