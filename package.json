@@ -23,7 +23,8 @@
       },
       "includeAsDev": [],
       "includeOnly": []
-    }
+    },
+    "linkedProjects": []
   },
   "name": "firedev",
   "version": "2.0.61",
