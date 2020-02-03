@@ -17,6 +17,8 @@
     "npm-debug.log*": true,
     ".sass-cache": true,
     ".sourcemaps": true,
+    "tsconfig.json": true,
+    ".npmrc": true,
     "tslint.json": true,
     ".editorconfig": true,
     "index.js": true,
@@ -25,12 +27,15 @@
     ".vscode/launch.json": true,
     "tsconfig.browser.json": true,
     "webpack.config.js": true,
+    "webpack.backend-bundle-build.js": true,
     "run.js": true,
     "tsconfig.json.filetemplate": true,
     ".gitignore": true,
     ".npmignore": true,
-    ".npmrc": true,
-    ".babelrc": true
+    ".babelrc": true,
+    "docs": true,
+    "logo.svg": true,
+    "bin/db.json": false
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#e66a54",
