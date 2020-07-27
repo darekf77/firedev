@@ -24,7 +24,12 @@
       "includeAsDev": [],
       "includeOnly": []
     },
-    "linkedProjects": []
+    "linkedProjects": [],
+    "libReleaseOptions": {
+      "nodts": false,
+      "obscure": false,
+      "ugly": false
+    }
   },
   "name": "firedev",
   "version": "2.0.61",
