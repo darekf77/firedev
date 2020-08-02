@@ -4,7 +4,7 @@ var { config } = { config: {} };
 
 config = {
 
-    domain: 'firedev.example.domain.com',
+    domain: 'firedev.io',
 
 
 }
