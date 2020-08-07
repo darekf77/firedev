@@ -1,6 +1,8 @@
+#!/usr/bin/env node
 //#region @backend
 // console.log('-- FIREDEV started... please wait. --')
 // require('cache-require-paths');
+
 
 global.hideLog = true;
 global.verboseLevel = 0;
@@ -20,7 +22,6 @@ if (process.argv.includes('-verbose')) {
 }
 var mode;
 var distOnly = (process.argv.includes('-dist'));
-var bundleOnly = (process.argv.includes('-bundle'));
 var npmOnly = (process.argv.includes('-npm'));
 if (distOnly) {
   mode = 'dist';
@@ -30,17 +31,6 @@ if (distOnly) {
   process.argv = process.argv.filter(f => !!f);
   var path = require('path');
   var pathToDistRun = path.join(__dirname, '../dist/index.js');
-  var start = require(pathToDistRun.replace(/\.js$/g, '')).start;
-  global.globalSystemToolMode = true;
-  // =======================================================================
-} else if (bundleOnly) {
-  mode = 'bundle';
-  !global.hideLog && console.log('- bundle only -');
-  // =========================== only dist ============================
-  process.argv = process.argv.filter(a => a !== '-bundle');
-  process.argv = process.argv.filter(f => !!f);
-  var path = require('path');
-  var pathToDistRun = path.join(__dirname, '../bundle/index.js');
   var start = require(pathToDistRun.replace(/\.js$/g, '')).start;
   global.globalSystemToolMode = true;
   // =======================================================================
@@ -105,7 +95,9 @@ if (distOnly) {
   }
   // =======================================================================
 }
+
+
 global.start = start;
-// console.log('before start')
-start(process.argv, 'tnp', mode);
+
+start(process.argv, 'firedev', mode);
 //#endregion

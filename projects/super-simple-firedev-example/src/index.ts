@@ -1,4 +1,4 @@
-import { Firedev } from 'firedev'
+import { Firedev } from 'firedev';
 
 @Firedev.Entity()
 export class USER {

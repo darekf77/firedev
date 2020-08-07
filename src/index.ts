@@ -1,5 +1,9 @@
-import run from 'tnp';
+//#region @backend
+import tnpStart from 'tnp';
 
-export const start = async (args, __, mode) => {
-  await run(args, 'firedev', mode);
+global['frameworkName'] = 'firedev';
+export const start = async (args, frameworkName, mode) => {
+  await (tnpStart as any)(args, frameworkName, mode);
 }
+//#endregion
+console.log()
