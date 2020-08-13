@@ -41,7 +41,8 @@
     "test:watch": "mocha  -r ts-node/register --watch  src/**/*.spec.ts --watch-extensions ts"
   },
   "bin": {
-    "firedev": "bin/firedev"
+    "firedev": "bin/firedev",
+    "firedev-debug": "bin/firedev-debug"
   },
   "repository": {
     "type": "git",

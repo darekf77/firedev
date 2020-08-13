@@ -2,7 +2,10 @@
 import tnpStart from 'tnp';
 
 global['frameworkName'] = 'firedev';
-export const start = async (args, frameworkName, mode) => {
-  await (tnpStart as any)(args, frameworkName, mode);
-}
 //#endregion
+export const start = async (args, frameworkName, mode) => {
+  //#region @backend
+  await (tnpStart as any)(args, frameworkName, mode);
+  //#endregion
+}
+
