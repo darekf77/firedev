@@ -27,7 +27,7 @@
     }
   },
   "name": "firedev",
-  "version": "2.0.63",
+  "version": "2.0.64",
   "description": "Isofiredevc solution for expressjs and angular5",
   "main": "index.js",
   "scripts": {
