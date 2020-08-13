@@ -2,11 +2,9 @@
   "tnp": {
     "resources": [
       "README.md",
-      "projects",
       "bin",
       "logo_github.png",
-      "logo.png",
-      "files.png"
+      "logo.png"
     ],
     "type": "isomorphic-lib",
     "version": "v2",
@@ -29,7 +27,7 @@
     }
   },
   "name": "firedev",
-  "version": "2.0.62",
+  "version": "2.0.63",
   "description": "Isofiredevc solution for expressjs and angular5",
   "main": "index.js",
   "scripts": {
