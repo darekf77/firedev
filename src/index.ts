@@ -6,4 +6,3 @@ export const start = async (args, frameworkName, mode) => {
   await (tnpStart as any)(args, frameworkName, mode);
 }
 //#endregion
-console.log()

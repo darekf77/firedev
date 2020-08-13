@@ -1,9 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --inspect
 //#region @backend
 // console.log('-- FIREDEV started... please wait. --')
 // require('cache-require-paths');
-
-
 global.hideLog = true;
 global.verboseLevel = 0;
 var verboseLevel = process.argv.find(a => a.startsWith('-verbose='));
