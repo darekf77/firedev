@@ -1,0 +1,30 @@
+{
+  "resources": [
+    "README.md",
+    "bin",
+    "logo_github.png",
+    "logo.png"
+  ],
+  "type": "isomorphic-lib",
+  "version": "v2",
+  "additionalNpmNames": [
+    "firedev.io"
+  ],
+  "overrided": {
+    "ignoreDepsPattern": [],
+    "dependencies": {
+      "tnp": "~0.0.45"
+    },
+    "includeAsDev": [],
+    "includeOnly": [
+      "tnp"
+    ],
+    "linkedFolders": []
+  },
+  "linkedProjects": [],
+  "libReleaseOptions": {
+    "nodts": false,
+    "obscure": false,
+    "ugly": false
+  }
+}
