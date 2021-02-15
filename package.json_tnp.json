@@ -26,5 +26,12 @@
     "nodts": false,
     "obscure": false,
     "ugly": false
-  }
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {},
+  "description": "Isomorphic solution for backend and frontend",
+  "author": "Dariusz Filipiak",
+  "homepage": "https://github.com/darekf77/firedev#readme",
+  "main": "index.js"
 }
