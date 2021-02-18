@@ -37,7 +37,7 @@
     "main": "index.js"
   },
   "name": "firedev",
-  "version": "2.0.87",
+  "version": "2.0.88",
   "description": "Isomorphic solution for backend and frontend",
   "main": "index.js",
   "scripts": {},
