@@ -9,7 +9,7 @@ export const start = async (args, frameworkName, mode) => {
 }
 
 //#endregion
-
+// console.log('firedev')
 import { Morphi } from 'morphi';
 export import Firedev = Morphi;
 

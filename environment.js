@@ -3,8 +3,7 @@ const path = require('path')
 var { config } = { config: {} };
 
 config = {
-
-    domain: 'firedev.io',
+  domain: 'firedev.io',
 
 
 }
