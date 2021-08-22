@@ -35,7 +35,7 @@
     "main": "index.js"
   },
   "name": "firedev",
-  "version": "2.0.101",
+  "version": "2.0.103",
   "description": "Isomorphic solution for backend and frontend",
   "main": "index.js",
   "scripts": {},
@@ -201,7 +201,7 @@
     "mkdirp": "0.5.1",
     "mocha": "5.2.0",
     "moment": "2.22.2",
-    "morphi": "~4.0.29",
+    "morphi": "~4.0.33",
     "ng-modal-lib": "0.0.6",
     "ng-packagr": "5.7.1",
     "ng-talkback": "~2.4.17",
@@ -255,7 +255,7 @@
     "task.js": "0.1.5",
     "tnp-cli": "~0.0.17",
     "tnp-config": "~0.0.69",
-    "tnp-core": "~0.0.47",
+    "tnp-core": "~0.0.51",
     "tnp-db": "~0.0.30",
     "tnp-helpers": "~0.0.58",
     "tnp-models": "~0.0.29",
@@ -280,7 +280,7 @@
     "zone.js": "0.10.2"
   },
   "dependencies": {
-    "tnp": "~0.0.109"
+    "tnp": "~0.0.114"
   },
   "license": "MIT",
   "private": false,
