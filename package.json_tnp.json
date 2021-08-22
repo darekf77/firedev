@@ -12,9 +12,7 @@
   ],
   "overrided": {
     "ignoreDepsPattern": [],
-    "dependencies": {
-      "tnp": "~0.0.45"
-    },
+    "dependencies": {},
     "includeAsDev": [],
     "includeOnly": [
       "tnp"
