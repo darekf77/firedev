@@ -13,9 +13,7 @@
     ],
     "overrided": {
       "ignoreDepsPattern": [],
-      "dependencies": {
-        "tnp": "~0.0.45"
-      },
+      "dependencies": {},
       "includeAsDev": [],
       "includeOnly": [
         "tnp"
@@ -37,7 +35,7 @@
     "main": "index.js"
   },
   "name": "firedev",
-  "version": "2.0.98",
+  "version": "2.0.99",
   "description": "Isomorphic solution for backend and frontend",
   "main": "index.js",
   "scripts": {},
@@ -293,7 +291,7 @@
     "zone.js": "0.10.2"
   },
   "dependencies": {
-    "tnp": "~0.0.45"
+    "tnp": "~0.0.106"
   },
   "license": "MIT",
   "private": false,
