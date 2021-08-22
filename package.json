@@ -35,7 +35,7 @@
     "main": "index.js"
   },
   "name": "firedev",
-  "version": "2.0.99",
+  "version": "2.0.100",
   "description": "Isomorphic solution for backend and frontend",
   "main": "index.js",
   "scripts": {},
@@ -52,11 +52,6 @@
     "url": "https://github.com/darekf77/firedev/issues"
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
-  "husky": {
-    "hooks": {
-      "pre-push": "tnp deps:show:if:standalone"
-    }
-  },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.3",
     "@angular-devkit/build-optimizer": "0.900.0-rc.7",
