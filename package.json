@@ -280,7 +280,7 @@
     "zone.js": "0.10.2"
   },
   "dependencies": {
-    "tnp": "~0.0.128"
+    "tnp": "~0.0.138"
   },
   "license": "MIT",
   "private": false,
