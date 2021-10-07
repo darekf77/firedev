@@ -281,7 +281,7 @@
     "zone.js": "0.10.2"
   },
   "dependencies": {
-    "tnp": "~0.0.150"
+    "tnp": "~undefined"
   },
   "license": "MIT",
   "private": false,
