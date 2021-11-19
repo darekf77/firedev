@@ -32,7 +32,8 @@
     "description": "Isomorphic solution for backend and frontend",
     "author": "Dariusz Filipiak",
     "homepage": "https://github.com/darekf77/firedev#readme",
-    "main": "index.js"
+    "main": "index.js",
+    "workerPlugins": {}
   },
   "name": "firedev",
   "version": "2.0.118",
