@@ -6,7 +6,7 @@
     "logo.png"
   ],
   "type": "isomorphic-lib",
-  "version": "v2",
+  "version": "v3",
   "additionalNpmNames": [
     "firedev.io"
   ],

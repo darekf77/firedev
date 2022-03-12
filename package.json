@@ -7,7 +7,7 @@
       "logo.png"
     ],
     "type": "isomorphic-lib",
-    "version": "v2",
+    "version": "v3",
     "additionalNpmNames": [
       "firedev.io"
     ],
@@ -36,9 +36,8 @@
     "workerPlugins": {}
   },
   "name": "firedev",
-  "version": "2.0.118",
+  "version": "13.0.0",
   "description": "Isomorphic solution for backend and frontend",
-  "main": "index.js",
   "scripts": {},
   "bin": {
     "firedev": "bin/firedev",
@@ -283,8 +282,5 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "2dc7c85c4af6901e3c0d2d9747d533bf9ee38153",
-  "recreatedFrom": {
-    "tnp.json": true
-  }
+  "lastBuildTagHash": "2dc7c85c4af6901e3c0d2d9747d533bf9ee38153"
 }
