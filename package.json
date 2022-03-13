@@ -36,7 +36,7 @@
     "workerPlugins": {}
   },
   "name": "firedev",
-  "version": "13.0.2",
+  "version": "13.0.3",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
