@@ -1,3 +1,2 @@
-# Firedev (work in progress)
+# Firedev
 
-framework based on https://github.com/darekf77/morphi
