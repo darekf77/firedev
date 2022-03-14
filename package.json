@@ -1,40 +1,4 @@
 {
-  "tnp": {
-    "resources": [
-      "README.md",
-      "bin",
-      "logo_github.png",
-      "logo.png"
-    ],
-    "overrided": {
-      "ignoreDepsPattern": [],
-      "dependencies": {},
-      "includeAsDev": [],
-      "includeOnly": [
-        "tnp"
-      ],
-      "linkedFolders": []
-    },
-    "linkedProjects": [],
-    "libReleaseOptions": {
-      "nodts": false,
-      "obscure": false,
-      "ugly": false
-    },
-    "type": "isomorphic-lib",
-    "version": "v3",
-    "additionalNpmNames": [
-      "firedev.io"
-    ],
-    "license": "MIT",
-    "private": false,
-    "scripts": {},
-    "description": "Isomorphic solution for backend and frontend",
-    "author": "Dariusz Filipiak",
-    "homepage": "https://github.com/darekf77/firedev#readme",
-    "main": "index.js",
-    "workerPlugins": {}
-  },
   "name": "firedev",
   "version": "13.0.3",
   "description": "Isomorphic solution for backend and frontend",
@@ -134,7 +98,6 @@
     "bcryptjs": "2.4.3",
     "body-parser": "1.18.2",
     "bootstrap": "5.1.3",
-    "bs4-breakpoint": "2.0.42",
     "buffer-shims": "1.0.0",
     "callsite-record": "4.1.3",
     "chai": "4.2.0",
@@ -276,5 +239,6 @@
     "validator": "9.2.0",
     "watch": "1.0.2",
     "zone.js": "~0.11.4"
-  }
+  },
+  "main": "index.js"
 }

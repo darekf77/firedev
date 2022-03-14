@@ -5,11 +5,6 @@
     "logo_github.png",
     "logo.png"
   ],
-  "type": "isomorphic-lib",
-  "version": "v3",
-  "additionalNpmNames": [
-    "firedev.io"
-  ],
   "overrided": {
     "ignoreDepsPattern": [],
     "dependencies": {},
@@ -25,6 +20,11 @@
     "obscure": false,
     "ugly": false
   },
+  "type": "isomorphic-lib",
+  "version": "v3",
+  "additionalNpmNames": [
+    "firedev.io"
+  ],
   "license": "MIT",
   "private": false,
   "scripts": {},
