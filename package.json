@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.0.3",
+  "version": "13.0.4",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -16,9 +16,7 @@
     "url": "https://github.com/darekf77/firedev/issues"
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
-  "dependencies": {
-    "tnp": "~13.0.6"
-  },
+  "dependencies": {},
   "license": "MIT",
   "private": false,
   "lastBuildTagHash": "2dc7c85c4af6901e3c0d2d9747d533bf9ee38153",
@@ -85,6 +83,7 @@
     "@types/progress": "2.0.3",
     "@types/q": "1.5.5",
     "@types/rimraf": "2.0.2",
+    "@types/semver": "6.0.1",
     "@types/systeminformation": "3.23.0",
     "@types/vinyl": "2.0.2",
     "@types/watch": "1.0.0",
@@ -130,6 +129,7 @@
     "express-fileupload": "0.4.0",
     "fbgraph": "1.4.1",
     "file-loader": "1.1.5",
+    "firedev": "^13",
     "firedev-crud": "~13.0.7",
     "firedev-crud-deamon": "~13.0.2",
     "firedev-ports": "~13.0.3",
@@ -212,6 +212,7 @@
     "reflect-metadata": "0.1.10",
     "rimraf": "2.6.2",
     "rxjs": "~7.5.0",
+    "semver": "6.3.0",
     "simple-git": "1.96.0",
     "sloc": "0.2.0",
     "socket.io": "2.4.1",
@@ -228,6 +229,7 @@
     "tnp-models": "~13.0.4",
     "tnp-ui": "~13.0.1",
     "ts-debug": "1.3.0",
+    "ts-loader": "2.3.1",
     "ts-node": "10.7.0",
     "tslib": "~2.3.0",
     "typeorm": "~0.2.45",
