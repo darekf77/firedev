@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.0.4",
+  "version": "13.0.5",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -16,10 +16,13 @@
     "url": "https://github.com/darekf77/firedev/issues"
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
-  "dependencies": {},
+  "dependencies": {
+    "tnp": "~13.0.31"
+  },
   "license": "MIT",
   "private": false,
   "lastBuildTagHash": "2dc7c85c4af6901e3c0d2d9747d533bf9ee38153",
+  "main": "index.js",
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",
     "@angular/animations": "~13.2.0",
@@ -241,6 +244,5 @@
     "validator": "9.2.0",
     "watch": "1.0.2",
     "zone.js": "~0.11.4"
-  },
-  "main": "index.js"
+  }
 }
