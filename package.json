@@ -22,5 +22,6 @@
   "license": "MIT",
   "private": false,
   "lastBuildTagHash": "2dc7c85c4af6901e3c0d2d9747d533bf9ee38153",
-  "main": "index.js"
+  "main": "index.js",
+  "devDependencies": {}
 }
