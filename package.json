@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.0.7",
+  "version": "13.0.8",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {

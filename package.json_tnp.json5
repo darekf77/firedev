@@ -2,8 +2,7 @@
   "resources": [
     "README.md",
     "bin",
-    "logo_github.png",
-    "logo.png"
+    "logo-wide.jpg"
   ],
   "overrided": {
     "ignoreDepsPattern": [],
