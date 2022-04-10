@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
   "dependencies": {
-    "tnp": "~13.0.60"
+    "tnp": "~13.0.61"
   },
   "license": "MIT",
   "private": false,
