@@ -1,7 +1,9 @@
 <p style="text-align: center;"><img src="./logo-wide.jpg" ></p>
 
+( EVERYTHING IN PROGRES HERE )
 
-Imagine you can have both backend/frontend code in 1 single file.
+
+Imagine you can have  backend/frontend code in 1 single file.
 
 <b>example.ts</b>
 
@@ -18,7 +20,7 @@ class User {
 
 ```
 
-and your browser gets this <b>example.ts</b> version:
+and your browser client gets this <b>example.ts</b> version:
 ```ts
 import { Firedev } from 'firedev';
 
@@ -40,11 +42,11 @@ npm i -g firedev
 firedev new my-first-isomorphic-app
 cd new my-first-isomorphic-app
 ```
-and now in 1st terminals
+1st terminal
 ```
 firedev build:watch
 ```
-and in the second
+and in the second (angular build)
 ```
 firedev build:app:watch
 ```
