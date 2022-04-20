@@ -1,9 +1,9 @@
 <p style="text-align: center;"><img src="./logo-wide.jpg" ></p>
 
-( EVERYTHING IN PROGRES HERE )
+( EVERYTHING IN PROGRESS HERE )
 
 
-Imagine you can have  backend/frontend code in 1 single file.
+Imagine you can have backend/frontend code in 1 single file.
 
 <b>example.ts</b>
 
@@ -20,7 +20,7 @@ class User {
 
 ```
 
-and your browser client gets this <b>example.ts</b> version:
+and your browser gets this <b>example.ts</b> version:
 ```ts
 import { Firedev } from 'firedev';
 
