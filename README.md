@@ -36,7 +36,7 @@ class User {
 
 
 
-# how to start
+# how to start (single project)
 ```
 npm i -g firedev
 firedev new my-first-isomorphic-app
@@ -49,4 +49,12 @@ firedev build:watch
 and in the second (angular build)
 ```
 firedev build:app:watch
+```
+
+# how to start (monorepo)
+```
+npm i -g firedev
+firedev new my-first-isomorphic-monorepo/app
+cd new my-first-isomorphic-monorepo
+firedev build:watch app
 ```
