@@ -32,3 +32,19 @@ class User {
 
 ```
 
+
+
+# how to start
+```
+npm i -g firedev
+firedev new my-first-isomorphic-app
+cd new my-first-isomorphic-app
+```
+and now in 1st terminals
+```
+firedev build:watch
+```
+and in the second
+```
+firedev build:app:watch
+```
