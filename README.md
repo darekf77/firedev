@@ -23,7 +23,7 @@ class User {
 
 ```
 
-your browser gets code below:
+your browser will get code below:
 ```ts
 import { Firedev } from 'firedev';
 
