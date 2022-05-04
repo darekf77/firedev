@@ -37,7 +37,7 @@ class User {
 
 ```
 
-## 2. Smooth REST api - define only host once and nothing else!
+## 2. Smooth REST api - define host only  once and nothing else!
 
 user.controller.ts
 ```ts
@@ -130,6 +130,53 @@ export class TasksComponent implements OnInit {
 }
 
 ```
+
+## 4. Super easy realtime / sockets communication
+task.ts
+```ts
+@Firedev.Entity()
+class Task {
+  static ctrl: TaskController; // automatically injected
+  //#region @backend
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: number;
+}
+```
+task.controller.ts
+ ```ts
+@Firedev.Controlle({ entity: Task })
+export class TaskController extends Firedev.Base.Controller<Task>{ } 
+```
+task.component.ts
+```ts
+@Component({
+  ...
+})
+export class TasksComponent implements OnInit, OnDestroy { 
+  $destroyed = new Subject();
+
+  @Input(); task: Task;
+  ngOnInit() {
+    Firedev.Realtime.Browser.listenChangesEntityObj(this.task).pipe(
+      takeUntil(this.$destroyed)
+      exhaustMap(()=> {
+        return Tasks.ctrl.getBy(this.task.id).received.observable.pipe(
+          map( response => {
+            this.task = response.body.json;
+          })
+        )
+      })
+    );
+  }
+
+  ngOnDestroy() { // it will automatically unsubscribe from socket communication
+    this.$destroyed.next();
+    this.$destroyed.unsubscribe();
+  }
+
+}
+ ```
 
 ## ( more docs are comming soon..  )
 
