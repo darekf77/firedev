@@ -5,6 +5,22 @@
 **Firedev** is a solution for [typescript](https://www.typescriptlang.org/) / [angular](https://angular.io/) / [rxjs](https://rxjs.dev/) / [nodejs](https://nodejs.org/en/) / [typeorm](https://typeorm.io/)  
 backend/frontend apps.
 
+# Instalation of firedev
+```
+npm i -g firedev
+```
+
+# Philosophy of Firedev
+=> One language for browser/backend/database - TypeScript
+
+=> Builded on top of rock solid frameworks
+
+=> Never ever repeat single line of code
+
+=> Crazy fast / developer-friendly coding in <b>Visual Studio Code</b>
+
+=> Have a huge amount of projects on your compouter and <b>1</b> node_modules 
+
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code.
 
@@ -180,29 +196,18 @@ export class TasksComponent implements OnInit, OnDestroy {
 
 ## ( more docs are comming soon..  )
 
-
-
-
-# how to start (single project)
+# how to create/start single project 
+( best for opensource/smaller projects )
 ```
-npm i -g firedev
-firedev new my-first-isomorphic-app
-cd new my-first-isomorphic-app
-```
-1st terminal
-```
-firedev build:watch
-```
-and in the second (angular build)
-```
-firedev build:app:watch
-// firedev build:app:watch --port 4444 -> start angular build on diffrent port
+firedev new my-app
+cd my-app
+firedev build:app:watch         # wait for next commands
 ```
 
-# how to start (monorepo)
+# how to start smart workspace project 
+( best private/complex application )
 ```
-npm i -g firedev
-firedev new my-first-isomorphic-monorepo/app
-cd new my-first-isomorphic-monorepo
-firedev build:watch app
+firedev new my-bigger-app/app
+cd new my-bigger-app
+firedev build:app:watch app     # wait for next commands
 ```
