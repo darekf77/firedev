@@ -5,9 +5,19 @@
 **Firedev** is a solution for [typescript](https://www.typescriptlang.org/) / [angular](https://angular.io/) / [rxjs](https://rxjs.dev/) / [nodejs](https://nodejs.org/en/) / [typeorm](https://typeorm.io/)  
 backend/frontend apps.
 
-# Instalation of firedev
+# Required version of NodeJS
+- Windows & MacOS: >=14
+- Linux:  >= 12
+
+# How to install firedev
 ```
 npm i -g firedev
+```
+
+#  How to uninstall firedev
+```
+npm uninstall -g firedev
+rimraf ~/.firedev # firedev templates projects and db
 ```
 
 # Philosophy of Firedev
@@ -19,7 +29,7 @@ npm i -g firedev
 
 => Crazy fast / developer-friendly coding in <b>Visual Studio Code</b>
 
-=> Have a huge amount of projects on your compouter and <b>1</b> node_modules 
+=> Shared <b>node_modules</b> for similar projects
 
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code.
@@ -201,7 +211,7 @@ export class TasksComponent implements OnInit, OnDestroy {
 ```
 firedev new my-app
 cd my-app
-firedev build:app:watch         # wait for next commands
+firedev build:app:watch         # wait for next commands in console
 ```
 
 # how to start smart workspace project 
@@ -209,5 +219,5 @@ firedev build:app:watch         # wait for next commands
 ```
 firedev new my-bigger-app/app
 cd new my-bigger-app
-firedev build:app:watch app     # wait for next commands
+firedev build:app:watch app     # wait for next commands in console
 ```
