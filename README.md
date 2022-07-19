@@ -75,7 +75,7 @@ class UserController {
                       // name 'helloAmazingWorld' from this class function 
   @Firedev.Http.GET() // is being use for creating expressjs server routes
   helloAmazingWorld():Firedev.Response<string> {  
-    //@backendFunc
+    //region @backendFunc
     return async () => {
       return `hello world`;
     };
