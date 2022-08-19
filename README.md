@@ -27,9 +27,13 @@ rimraf ~/.firedev # firedev templates projects and db
 
 => Never ever repeat single line of code
 
+=> Everything automatically generated, strongly typed
+
 => Crazy fast / developer-friendly coding in <b>Visual Studio Code</b>
 
 => Shared <b>node_modules</b> for similar projects
+
+=> All pacakges in all projects without doing anything
 
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
