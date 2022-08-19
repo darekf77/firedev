@@ -33,6 +33,8 @@ rimraf ~/.firedev # firedev templates projects and db
 
 => Shared <b>node_modules</b> for similar projects
 
+=> Easy port of backend/frontend/<any-sql-db> apps to backend/frontend/websql version
+
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
 
