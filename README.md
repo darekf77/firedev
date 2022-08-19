@@ -89,7 +89,7 @@ user.ts
 ```ts
 @Firedev.Entity()
 class User {
-  static ctrl: UserController; // automaticly injected
+  static ctrl: UserController; // automatically injected
   static helloAmazingWorld() {
     return this.ctrl.helloAmazingWorld().received.observable;
   } 
