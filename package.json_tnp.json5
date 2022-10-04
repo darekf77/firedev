@@ -4,6 +4,7 @@
     "bin",
     "logo-wide.jpg"
   ],
+
   "overrided": {
     "ignoreDepsPattern": [],
     "dependencies": {},
@@ -13,17 +14,23 @@
     ],
     "linkedFolders": []
   },
+
   "linkedProjects": [],
+  'linkedRepos': [],
+
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
     "ugly": false
   },
+
   "type": "isomorphic-lib",
   "version": "v3",
+
   "additionalNpmNames": [
     "firedev.io"
   ],
+
   "license": "MIT",
   "private": false,
   "scripts": {},
@@ -31,5 +38,5 @@
   "author": "Dariusz Filipiak",
   "homepage": "https://github.com/darekf77/firedev#readme",
   "main": "index.js",
-  "workerPlugins": {}
+  "workerPlugins": {},
 }
