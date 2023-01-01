@@ -55,7 +55,7 @@ class User {
 
 your browser will get code below:
 ```ts
-import { Firedev } from 'firedev';
+import { Firedev } from 'firedev/browser';
 
 @Firedev.Entity()
 class User {
@@ -67,7 +67,41 @@ class User {
 
 ```
 
-## 2. Smooth REST api - define host only  once and nothing else!
+## 2. Additional "Websql Mode" for writing backend in browser!
+
+<b>example.ts</b>
+
+```ts
+import { Firedev } from 'firedev';
+
+@Firedev.Entity()
+class User {
+  //#region @websql
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: string;
+}
+
+```
+
+your browser will get code below:
+```ts
+import { Firedev } from 'firedev/websql';
+
+
+@Firedev.Entity()
+class User {
+ //#region @websql
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: string;
+}
+
+```
+Database column is created on frontend! (sql.js)
+
+
+## 3. Smooth REST api - define host only  once and nothing else!
 
 user.controller.ts
 ```ts
@@ -134,7 +168,7 @@ context.host // -> available on backend and frontend !
 
 
 ```
-## 3. CRUD api in 60 seconds 
+## 4. CRUD api in 60 seconds 
 ```ts
 @Firedev.Entity()
 class Task {
@@ -161,7 +195,7 @@ export class TasksComponent implements OnInit {
 
 ```
 
-## 4. Super easy realtime / sockets communication
+## 5. Super easy realtime / sockets communication
 task.ts
 ```ts
 @Firedev.Entity()
