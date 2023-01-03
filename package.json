@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.1.27",
+  "version": "13.1.28",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -137,7 +137,7 @@
     "firedev-crud": "~13.1.36",
     "firedev-crud-deamon": "~13.1.26",
     "firedev-ports": "~13.1.30",
-    "firedev-storage": "~13.1.20",
+    "firedev-storage": "~13.1.22",
     "firedev-typeorm": "~13.1.10",
     "fkill": "6.1.0",
     "font-awesome": "4.7.0",

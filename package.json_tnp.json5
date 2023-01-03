@@ -22,7 +22,8 @@
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
-    "ugly": false
+    "ugly": false,
+    'includeNodeModules': true,
   },
 
   'smartContainerTarget': '',
