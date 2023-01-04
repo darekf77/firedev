@@ -10,7 +10,8 @@
     "dependencies": {},
     "includeAsDev": [],
     "includeOnly": [
-      "tnp"
+      'tnp',
+      'ora',
     ],
     "linkedFolders": []
   },
