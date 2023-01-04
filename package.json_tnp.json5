@@ -20,7 +20,7 @@
   'linkedRepos': [],
 
   "libReleaseOptions": {
-    "nodts": true,
+    "nodts": false,
     "obscure": false,
     "ugly": true,
     'includeNodeModules': true,
