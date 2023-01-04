@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.1.56",
+  "version": "13.1.57",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/darekf77/firedev#readme",
   "dependencies": {
     "ora": "3.4.0",
-    "tslib": "~2.3.0",
+    "tnp-config": "~13.1.50",
     "tnp": "~13.1.123"
   },
   "license": "MIT",
@@ -235,7 +235,6 @@
     "systeminformation": "3.45.7",
     "task.js": "0.1.5",
     "tnp-cli": "~13.1.35",
-    "tnp-config": "~13.1.50",
     "tnp-core": "~13.1.56",
     "tnp-db": "~13.1.7",
     "tnp-helpers": "~13.1.10",
@@ -244,6 +243,7 @@
     "ts-debug": "1.3.0",
     "ts-loader": "2.3.1",
     "ts-node": "10.7.0",
+    "tslib": "~2.3.0",
     "typeorm": "~0.3.10",
     "typescript": "~4.6.2",
     "typescript-class-helpers": "~13.1.9",

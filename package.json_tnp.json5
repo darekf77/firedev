@@ -12,7 +12,7 @@
     "includeOnly": [
       'tnp',
       'ora',
-      'tslib'
+      'tnp-config'
     ],
     "linkedFolders": []
   },
