@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.1.36",
+  "version": "13.1.37",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
   "dependencies": {
-    "tnp": "~13.1.111"
+    "tnp": "~13.1.122"
   },
   "license": "MIT",
   "private": false,
