@@ -13,7 +13,8 @@
       'tnp',
       'ora',
       'tnp-config',
-      'tslib'
+      'tslib',
+      'progress',
     ],
     "linkedFolders": []
   },
