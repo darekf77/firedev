@@ -11,6 +11,7 @@
     "includeAsDev": [],
     "includeOnly": [
       'tnp',
+      'tslib'
     ],
     "linkedFolders": []
   },
