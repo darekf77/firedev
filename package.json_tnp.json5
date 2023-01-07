@@ -11,11 +11,8 @@
     "includeAsDev": [],
     "includeOnly": [
       'tnp',
+      // need just for now TODO remove from 'bin/start.js'
       'ora',
-      'open',
-      'isomorphic-region-loader',
-      'tslib',
-      'progress',
     ],
     "linkedFolders": []
   },
