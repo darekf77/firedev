@@ -13,6 +13,8 @@
       'tnp',
       // need just for now TODO remove from 'bin/start.js'
       'ora',
+      // need when is looking for tnp
+      'tnp-config'
     ],
     "linkedFolders": []
   },
