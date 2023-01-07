@@ -25,7 +25,7 @@
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
-    "ugly": true,
+    "ugly": false,
     'includeNodeModules': true,
   },
 
