@@ -12,7 +12,8 @@
     "includeOnly": [
       'tnp',
       'ora',
-      'tnp-config',
+      'open',
+      'isomorphic-region-loader',
       'tslib',
       'progress',
     ],
@@ -26,7 +27,7 @@
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
-    "ugly": true,
+    "ugly": false,
     'includeNodeModules': true,
   },
 
