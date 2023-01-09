@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.1.81",
+  "version": "13.1.82",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/darekf77/firedev#readme",
   "dependencies": {
+    "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~13.1.146"
+    "tnp": "~13.1.148"
   },
   "license": "MIT",
   "private": false,
@@ -207,7 +208,6 @@
     "npm-run": "4.1.2",
     "omelette": "0.4.5",
     "open": "7.2.1",
-    "ora": "3.4.0",
     "passport": "0.3.2",
     "passport-http-bearer": "1.0.1",
     "password-hash": "1.2.2",
