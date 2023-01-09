@@ -92,7 +92,7 @@ if (procType === 'child-of-root' || debugMode) {
 //   startSpinner = !isNodeDebuggerEnabled;
 // }
 
-if (frameworkName === 'tnp') {
+if (frameworkName === 'tnp' || global.skipCoreCheck) {
   startSpinner = false;
 }
 
@@ -146,7 +146,7 @@ if (startSpinner) {
   };
 
   const cwd = process.cwd();
-  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')} `
+  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')}  ${global.skipCoreCheck ? '--skipCoreCheck':''} `
     + `${spinnerOnInArgs ? '-spinner' : (spinnerOffInArgs ? '-spinner=off' : '')} ${childprocsecretarg}`).split(' ');
 
   const proc = child_process.fork(crossPlatofrmPath(__filename), argsToCHildProc, {
