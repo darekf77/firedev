@@ -146,7 +146,7 @@ if (startSpinner) {
   };
 
   const cwd = process.cwd();
-  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')}  ${global.skipCoreCheck ? '--skipCoreCheck':''} `
+  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')} ${global.verbose ? '-verbose': ''} ${global.skipCoreCheck ? '--skipCoreCheck':''} `
     + `${spinnerOnInArgs ? '-spinner' : (spinnerOffInArgs ? '-spinner=off' : '')} ${childprocsecretarg}`).split(' ');
 
   const proc = child_process.fork(crossPlatofrmPath(__filename), argsToCHildProc, {
