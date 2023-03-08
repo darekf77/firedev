@@ -1,5 +1,5 @@
 //#region @backend
-global['frameworkName'] = 'firedev';
+
 //#region quick fixes
 // console.log('-- FIREDEV started... please wait. --')
 // require('cache-require-paths');
@@ -27,7 +27,7 @@ global.spinnerInParentProcess = (procType === 'child-of-root');
 const orgArgv = JSON.parse(JSON.stringify(process.argv));
 global.tnpNonInteractive = (typeof process.argv.find(a => a.startsWith('--tnpNonInteractive')) !== 'undefined');
 const spinnerIsDefault = !tnpNonInteractive;
-global.frameworkName = (typeof (process.argv.find(a => a.endsWith('firedev'))) !== 'undefined') ? 'firedev' : 'tnp';
+global.frameworkName = 'firedev';
 global.restartWorker = (typeof (process.argv.find(a => a.startsWith('-restartWorker'))) !== 'undefined');
 global.reinitDb = (typeof (process.argv.find(a => a.startsWith('-reinitDb'))) !== 'undefined');
 global.globalSystemToolMode = true;
@@ -271,4 +271,3 @@ function setText(text, toSpiner = false) {
 }
 
 //#endregion
-
