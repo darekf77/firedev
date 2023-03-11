@@ -13,10 +13,10 @@
 backend/frontend apps.
 
 
-# Required version of NodeJS
-- Windows: >=14 
-- MacOS: >=14
-- Linux:  >= 12
+# Required version of NodeJS 
+- Windows (gitbash): >= v16 
+- MacOS: >= v16
+- Linux: >= v16
 
 # How to install firedev
 ```
@@ -24,7 +24,7 @@ npm i -g firedev
 ```
 
 #  How to uninstall firedev from local machine
-Firedev stores a big global ontainer (in ~/.firedev) for npm packages that is being shared 
+Firedev stores a big global container (in ~/.firedev) for npm packages that are being shared 
 accros all firedev apps
 ```
 npm uninstall -g firedev
@@ -56,7 +56,7 @@ rm -rf ~/.firedev
 
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
-- that a dream situation for any developer!
+- this is a dream situation for any developer!
 - perfect solution for any kind of projects ( hobbyst / freelancers / enterprise )
 
 <b>example.ts</b>
@@ -293,7 +293,7 @@ firedev release
 firedev update
 ```
 
-3. Remove temporary files from repository / reset files content from main local container
+3. Remove temporary files from repository / reset files content from main container
 ```
 firedev clear
 ```
@@ -306,17 +306,21 @@ firedev clear
 ```
 firedev new my-app
 cd my-app
-firedev build:dist:watch         # wait for next commands in console
+firedev start
+# select proper debug task in  Visual Studio Code
+# press f5 in your Visual Studio Code
 ```
 
-## 2 How to start smart workspace project)
+## 2 How to start smart workspace project
 - best private/complex application
 - can be deployed to github pages
 - can be deployed to npm as organization package
 ```
 firedev new my-workspace-with-apps/app
 cd new my-workspace-with-apps
-firedev build:dist:watch app     # wait for next commands in console
+firedev star
+# select proper debug task in  Visual Studio Code
+# press f5 in your Visual Studio Code
 ```
 
 # What is in progress

@@ -19,7 +19,7 @@
   "dependencies": {
     "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~13.1.170"
+    "tnp": "~13.1.174"
   },
   "license": "MIT",
   "private": false,
@@ -235,11 +235,11 @@
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
     "task.js": "0.1.5",
-    "tnp-cli": "~13.1.41",
+    "tnp-cli": "~13.1.44",
     "tnp-config": "~13.1.55",
     "tnp-core": "~13.1.61",
     "tnp-db": "~13.1.8",
-    "tnp-helpers": "~13.1.16",
+    "tnp-helpers": "~13.1.17",
     "tnp-models": "~13.1.9",
     "tnp-ui": "~13.1.27",
     "ts-debug": "1.3.0",
