@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "bc65302d88d33e9c0d7628b5e6277059fc77397e",
+  "lastBuildTagHash": "79fbfd3fd31c7fc50795c00a210250de5477f3fe",
   "main": "index.js",
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.9",
