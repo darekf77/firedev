@@ -5,7 +5,16 @@
 Update of global cli tool and core containers
 
 ```
-firedev update
+firedev autoupdate
+firedev au
+```
+
+## Verbose mode
+
+Add -verbose flag to any command to see more of debugging data
+
+```
+firedev any-firedev-command -verbose
 ```
 
 ## Creating apps/libs as standalone or smart container (organization) projects
@@ -18,19 +27,27 @@ firedev container my-new-container
 
 ## Building libs/apps at the same time in one process
 
-Quicket way to start development
+Quicket way to start local development of app and lib build in the same process
 
 ```
+# local lib build
 firedev start
 firedev start --port 4444
 firedev start --websql
+firedev s
+
+# global lib build
+firedev start:watch 
+firedev sw 
 ```
 
-## Building apps
+
+## Building libs code
 
 Don't waste your local resources and build/serve only things that you need
 
 ```
+# local lib build
 firedev build:dist
 firedev bd
 firedev build:dist:watch
@@ -39,8 +56,12 @@ firedev build:bundle
 firedev bb
 firedev build:bundle:watch
 firedev bbw
-firedev build:watch
+
+# global lib build
+firedev build:watch  
 firedev bw
+
+# app build
 firedev build:app
 firedev ba
 firedev build:app child-project-name
@@ -57,17 +78,24 @@ firedev bbaw
 
 ## Releasing to npm / github pages
 
-Easy release of app or libs
+Easy release of app or libs for standalone/organization projects
 
 ```
+# path release
 firedev release
 firedev patch:release
 firedev r
-firedev release --all
-firedev minor:release
-firedev major:release
+firedev release --all   # for release and omit cache
 firedev automatic:release
 firedev ar
+
+# minor release
+firedev minor:release
+firedev minor
+
+# major relase
+firedev major:release
+firedev major
 ```
 
 ## Github pushing/puling projects
@@ -95,4 +123,15 @@ Unit/Integration testing
 firedev test
 firedev test:watch
 firedev test:watch:debug
+```
+
+
+
+## Firedev extension for Visual Studio Code 
+
+Install vscode plugin
+
+```
+firedev vscode:ext
+firedev ext
 ```
