@@ -1,13 +1,14 @@
 # Official firedev commands
 
-## Update of firedev
+## Firedev auto-update
 
-Update of global cli tool and core containers
+Triger auto-update of firedev's global cli tool and core containers
 
 ```
 firedev autoupdate
 firedev au
 ```
+
 
 ## Verbose mode
 
@@ -61,6 +62,10 @@ firedev bbw
 firedev build:watch  
 firedev bw
 
+# revert global lib build of package(s) to original state
+firedev revert
+firedev rev
+
 # app build
 firedev build:app
 firedev ba
@@ -76,7 +81,7 @@ firedev build:bundle:app:watch
 firedev bbaw
 ```
 
-## Releasing to npm / github pages
+## Releasing to npm repository or/and  github/gitlab pages
 
 Easy release of app or libs for standalone/organization projects
 
@@ -126,6 +131,14 @@ firedev test:watch:debug
 ```
 
 
+## Firedev project update
+
+Update firedev project configuration (linked project, firedev framework versiopn etc.)
+
+```
+firedev update
+firedev up
+```
 
 ## Firedev extension for Visual Studio Code 
 

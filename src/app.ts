@@ -4,26 +4,26 @@ import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-selector: 'app-firedev',
-template: 'hello from firedev'
+  selector: 'app-firedev',
+  template: 'hello from firedev'
 })
 export class FiredevComponent implements OnInit {
-constructor() { }
+  constructor() { }
 
-ngOnInit() { }
+  ngOnInit() { }
 }
 
 @NgModule({
-imports: [],
-exports: [FiredevComponent],
-declarations: [FiredevComponent],
-providers: [],
+  imports: [],
+  exports: [FiredevComponent],
+  declarations: [FiredevComponent],
+  providers: [],
 })
 export class FiredevModule { }
 //#endregion
 
 //#region @backend
-async function start(port: number)  {
+async function start(port: number) {
 
 }
 

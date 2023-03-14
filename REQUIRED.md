@@ -7,5 +7,7 @@ Supported OS-es:
 
 
 What may be supported in future:
-- Windows 7,8,10,11 with WSL (problems with pulling for watching changes)
-- win7 x64 with NodeJS v12 (problems with deleting folder, updating firedev)
+- Windows 7 x64 with NodeJS v12 (problems with deleting folder, updating firedev)
+- Windows 8,
+- Windows 10,11 with WSL (problems with pulling for watching changes)
+
