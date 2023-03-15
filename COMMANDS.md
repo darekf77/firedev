@@ -26,6 +26,15 @@ firedev new my-workspace/my-workspace-child-lib-app
 firedev container my-new-container
 ```
 
+## Initing / clearing temporary files for project 
+Everytime you are starting lib build or you wan't to clear all project
+temporary data.. use these commands
+```
+firedev clear
+firedev init # => is a part of lib build and you don't need to use it
+
+```
+
 ## Building libs/apps at the same time in one process
 
 Quicket way to start local development of app and lib build in the same process
