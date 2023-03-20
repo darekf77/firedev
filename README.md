@@ -8,7 +8,8 @@
 [rxjs](https://rxjs.dev/) / 
 [ngrx](https://ngrx.io/) (optional) /
 [nodejs](https://nodejs.org/en/) / 
-[typeorm](https://typeorm.io/)  /
+[typeorm](https://typeorm.io/) 
+([mysql](https://www.mysql.com/) | [sqlite](https://github.com/WiseLibs/better-sqlite3) | [sql.js](https://sql.js.org))
 
 backend/frontend apps.
 
