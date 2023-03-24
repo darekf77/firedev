@@ -47,6 +47,8 @@ rm -rf ~/.firedev
 
 => Shared <b>node_modules</b> for similar projects (from one big npm pacakges container)
 
+=> No need for local node_modules => many projects takes magabytes instead gigabytes
+
 => Automation for releasing projects (standalone and organization) to github pages / npm repositories
 
 => Develop libraries and apps at the same time! (mixed NodeJs packages with proper Angular ivy packages)
