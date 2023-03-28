@@ -31,6 +31,7 @@ Everytime you are starting lib build or you wan't to clear all project
 temporary data.. use these commands
 ```
 firedev clear
+firedev cl
 firedev init # => is a part of lib build and you don't need to use it
 
 ```
