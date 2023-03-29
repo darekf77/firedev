@@ -1,48 +1,62 @@
 <layout-slider-vertical #mainSlider>
 
-  <div class="logo" header="logo" >
-    <img src="src/assets/logo-header.jpg" >
+  <div class="logo"
+       header="logo">
+    <img src="src/assets/logo-header.jpg">
   </div>
+
+
+  <ng-template #first>
+    <columns-container>
+      <column grow>
+      </column>
+      <column [width]="800">
+        welcome to firedev.io
+      </column>
+      <column grow>
+      </column>
+    </columns-container>
+  </ng-template>
+
+
 
   <p header="normal">
 
     <a href="javascript:void(0)"
        [parent]="mainSlider"
-       gotoChildVerticalSlider="first">First</a>
+       gotoChildVerticalSlider="first">
+      Home
+    </a>
 
     <a href="javascript:void(0)"
        [parent]="mainSlider"
-       gotoChildVerticalSlider="second">Second</a>
+       gotoChildVerticalSlider="second">
+      Docs
+    </a>
 
-    <a href="javascript:void(0)"
-       *ngFor="let child of childs"
-       [parent]="mainSlider"
-       gotoChildVerticalSlider="{{child.header}}">{{child.header}} </a>
   </p>
 
   <p header="scroll">
 
     <a href="javascript:void(0)"
        [parent]="mainSlider"
-       gotoChildVerticalSlider="first">First</a>
+       gotoChildVerticalSlider="first">
+      Home
+    </a>
 
     <a href="javascript:void(0)"
        [parent]="mainSlider"
-       gotoChildVerticalSlider="second">Second</a>
+       gotoChildVerticalSlider="second">
+      Docs
+    </a>
 
-    <a href="javascript:void(0)"
-       [parent]="mainSlider"
-       *ngFor="let child of childs"
-       gotoChildVerticalSlider="{{child.header}}">{{child.header}} </a>
   </p>
 
   <div body>
 
     <layout-slider-vertical-child class="long"
                                   [header]="'first'">
-      <h3>First</h3>
-      <router-outlet></router-outlet>
-
+      <ng-container [ngTemplateOutlet]="first"></ng-container>
     </layout-slider-vertical-child>
 
     <layout-slider-vertical-child class="long"
@@ -50,13 +64,10 @@
       <h3>Second</h3>
     </layout-slider-vertical-child>
 
-
-    <layout-slider-vertical-child *ngFor="let num of numbers"
-                                  class="long"
-                                  [header]="'test'+num">
-      <h3>{{'test'+num}}</h3>
+    <layout-slider-vertical-child class="long"
+                                  [header]="'third'">
+      <h3>third</h3>
     </layout-slider-vertical-child>
-
 
   </div>
 

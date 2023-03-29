@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { SliderVerticalModule } from "@firedev-baseline/layout";
+import { StaticColumnsModule } from 'static-columns';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SliderVerticalModule,
+    StaticColumnsModule,
     RouterModule.forChild(routes),
   ],
   declarations: [MainComponent],

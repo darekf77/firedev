@@ -1,5 +1,15 @@
+
+
+
+@font-face {
+  font-family: 'MainFont';
+  src: url('src/assets/fonts/Roboto/Roboto-Thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
 :host {
   display: block;
+  font-family: "MainFont";
 }
 
 body {
@@ -7,3 +17,5 @@ body {
   height: 100%;
   width: 100%;
 }
+
+
