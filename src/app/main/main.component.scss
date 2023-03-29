@@ -1,33 +1,42 @@
-
-
 h1 {
   margin: 0px;
 }
 
 p {
   margin: 0px;
-  background: whitesmoke;
+
   a {
     font-weight: lighter;
   }
 }
 
-p[header="normal"]{
+p[header="normal"] {
   height: 60px;
+
   a {
     line-height: 60px;
+    margin-right: 10px;
   }
 }
 
-p[header="scroll"]{
-  height: 40px;
+p[header="scroll"] {
+  height: 50px;
+
   a {
     line-height: 40px;
+    margin-right: 10px;
   }
 }
 
 :host {
   .long {
     height: 500px;
+  }
+}
+
+.logo {
+
+  img {
+    vertical-align: middle;
   }
 }
