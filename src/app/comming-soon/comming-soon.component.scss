@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+* {
+  font-family: "MainFont";
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  display: table;
+  height: 100%;
+  img {
+    height: 50px;
+  }
+  span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

@@ -21,9 +21,14 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./app/main/main.module')
-      .then(m => m.MainModule),
+    loadChildren: () => import('./app/comming-soon/comming-soon.module')
+      .then(m => m.CommingSoonModule),
   },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./app/main/main.module')
+  //     .then(m => m.MainModule),
+  // },
 ];
 //#endregion
 
