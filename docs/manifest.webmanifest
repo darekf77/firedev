@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
-  "start_url": "https://darekf77.github.io/firedev/",
+  "start_url": "https://firedev.io/",
   "icons": [
     {
       "src": "assets/icons/android-chrome-192x192.png",
