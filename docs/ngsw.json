@@ -1,0 +1,139 @@
+{
+  "configVersion": 1,
+  "timestamp": 1680127154078,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/786.527683836a409947.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.5d3edfa5713afe62.js",
+        "/manifest.webmanifest",
+        "/polyfills.392b91c75611df11.js",
+        "/runtime.3d5e24e1fe58656d.js",
+        "/styles.106adc5fefc24396.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/assets-for/firedev/favicon.ico",
+        "/assets/assets-for/firedev/fonts/Roboto/LICENSE.txt",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Black.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-BlackItalic.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Bold.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-BoldItalic.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Italic.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Light.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-LightItalic.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Medium.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-MediumItalic.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Regular.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-Thin.ttf",
+        "/assets/assets-for/firedev/fonts/Roboto/Roboto-ThinItalic.ttf",
+        "/assets/assets-for/firedev/fonts/material-icons.woff2",
+        "/assets/assets-for/firedev/icons/android-chrome-192x192.png",
+        "/assets/assets-for/firedev/icons/android-chrome-512x512.png",
+        "/assets/assets-for/firedev/icons/apple-touch-icon.png",
+        "/assets/assets-for/firedev/icons/browserconfig.xml",
+        "/assets/assets-for/firedev/icons/favicon-16x16.png",
+        "/assets/assets-for/firedev/icons/favicon-32x32.png",
+        "/assets/assets-for/firedev/icons/favicon.ico",
+        "/assets/assets-for/firedev/icons/mstile-150x150.png",
+        "/assets/assets-for/firedev/icons/site.webmanifest",
+        "/assets/assets-for/firedev/logo-header.jpg",
+        "/assets/assets-for/firedev/logo-wide.jpg",
+        "/assets/assets-for/firedev/logo.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/sql-wasm.wasm"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/786.527683836a409947.js": "74abcef11c0d3a4a14bea4346353dd539828b772",
+    "/assets/assets-for/firedev/favicon.ico": "4ed44769dc75ec4de5a81d84fd6a63c6147fd685",
+    "/assets/assets-for/firedev/fonts/Roboto/LICENSE.txt": "47b573e3824cd5e02a1a3ae99e2735b49e0256e4",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Black.ttf": "3f8e401d808f6ce84b542266726514ac8be73171",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-BlackItalic.ttf": "03d6e3747d862385dbe48e8296385b9236101a62",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Bold.ttf": "62442a18a9fe9457c1afeabf683d263a691b7798",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-BoldItalic.ttf": "2f10ad9e8cab0880182705c4e0fbaeabae706e64",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Italic.ttf": "65f3f6a7e1bd2fa6f2df35e4b07775d7f1dde4f0",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Light.ttf": "18788c5d630fa695f9283f6393bfa541b2031508",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-LightItalic.ttf": "6e01f9df9449565697032b002706a94b51862bbe",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Medium.ttf": "3c6a09fcc6a454924c81af7dff94fc6d399ed79b",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-MediumItalic.ttf": "b3aa2d8f16d5a331fdced82f213a052b204eaca0",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Regular.ttf": "56c5c0d38bde4c1f1549dda43db37b09c608aad3",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-Thin.ttf": "58c733e22bceeaf9609ce578eca92ac303c6d92f",
+    "/assets/assets-for/firedev/fonts/Roboto/Roboto-ThinItalic.ttf": "cc79d5a23bd0ec08b1d99f5390bf33cacc3082f4",
+    "/assets/assets-for/firedev/fonts/material-icons.woff2": "88f7b5ba379df8bac8ea74bdb62c374dce17e994",
+    "/assets/assets-for/firedev/icons/android-chrome-192x192.png": "5d61477068409fbd3a8747f21944a82310e71ae4",
+    "/assets/assets-for/firedev/icons/android-chrome-512x512.png": "9e6b38cedb8ae06922df2b368aa58ee35d49ea33",
+    "/assets/assets-for/firedev/icons/apple-touch-icon.png": "48caba285f233f27505173f4f240fc3247ec8193",
+    "/assets/assets-for/firedev/icons/browserconfig.xml": "974aea18bda5a95802c06b80126ab1d96d91d708",
+    "/assets/assets-for/firedev/icons/favicon-16x16.png": "6633d479d91d58b943f1244666756844f201fe3a",
+    "/assets/assets-for/firedev/icons/favicon-32x32.png": "9ccfd9db6516eb7045fab6b1fa713533ee52e407",
+    "/assets/assets-for/firedev/icons/favicon.ico": "4ed44769dc75ec4de5a81d84fd6a63c6147fd685",
+    "/assets/assets-for/firedev/icons/mstile-150x150.png": "96e2e7c2f4cca70355a83b75ce746335c10ee9a1",
+    "/assets/assets-for/firedev/icons/site.webmanifest": "13e5aa58eb2182d8ace63266856c8cc29c47c083",
+    "/assets/assets-for/firedev/logo-header.jpg": "9c71a914e370babb966ce7decef70e68b0074bfb",
+    "/assets/assets-for/firedev/logo-wide.jpg": "f7020cb427583a8955dc1a4fa663a83db999edf8",
+    "/assets/assets-for/firedev/logo.png": "0acade28edbd77ccf3c03447f63d1b83642e45f2",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/sql-wasm.wasm": "fcc42ce03c2b5af20e90acc2b75263acc502d736",
+    "/favicon.ico": "4ed44769dc75ec4de5a81d84fd6a63c6147fd685",
+    "/index.html": "bd31c2af740fe558af2c49f2b44a226a044f8156",
+    "/main.5d3edfa5713afe62.js": "ce8a63c7f810c34c79b308e200c412b48760bd0d",
+    "/manifest.webmanifest": "b7a6579eec262e78667eec6c9348cd7e5bc7bfd4",
+    "/polyfills.392b91c75611df11.js": "73e834e6982c223cd6775c74565ee01a6bbdfd83",
+    "/runtime.3d5e24e1fe58656d.js": "cfc0d0775dd2269c6d39720811de5ead22188144",
+    "/styles.106adc5fefc24396.css": "aa07ccf2b1035fdd3bf6d0314bf46de212c3e2e9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

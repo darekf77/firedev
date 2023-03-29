@@ -4,6 +4,7 @@ import { Firedev } from 'firedev';
 import { AppController } from './app/shared/app/app.controller';
 import { App } from './app/shared/app/app';
 import { host } from './app/constants';
+declare const ENV: any;
 
 //#region @browser
 import { NgModule, NgZone, ViewEncapsulation } from '@angular/core';
@@ -42,7 +43,9 @@ const routes: Routes = [
 export class FiredevComponent implements OnInit {
   constructor(
     private ngZone: NgZone
-  ) { }
+  ) {
+    document.title = ENV.title;
+  }
 
   async ngOnInit() {
     Firedev.initNgZone(this.ngZone);
