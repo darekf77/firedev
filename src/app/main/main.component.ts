@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { map, Subscription } from 'rxjs';
 import * as _ from 'lodash';
+import { App } from '../shared/app/app';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +10,14 @@ import * as _ from 'lodash';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  readme$ = App.ctrl.readme().received.observable.pipe(
+    tap(d => {
+      console.log(d)
+    }),
+    map(d => d.body.text)
+  )
+
   handlers: Subscription[] = [];
   constructor() { }
 

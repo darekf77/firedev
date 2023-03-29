@@ -1,3 +1,42 @@
+<ng-template #first>
+  <columns-container>
+    <column grow>
+    </column>
+    <column [width]="800">
+      welcome to firedev.io
+    </column>
+    <column grow>
+    </column>
+  </columns-container>
+</ng-template>
+
+<ng-template #headerList>
+  <a href="javascript:void(0)"
+     [parent]="mainSlider"
+     gotoChildVerticalSlider="start">
+    Start
+  </a>
+
+  <a href="javascript:void(0)"
+     [parent]="mainSlider"
+     gotoChildVerticalSlider="video">
+    Video
+  </a>
+
+  <a href="javascript:void(0)"
+     [parent]="mainSlider"
+     gotoChildVerticalSlider="docs">
+    Docs
+  </a>
+
+  <a href="javascript:void(0)"
+     [parent]="mainSlider"
+     gotoChildVerticalSlider="contact">
+    Contact
+  </a>
+
+</ng-template>
+
 <layout-slider-vertical #mainSlider>
 
   <div class="logo"
@@ -5,68 +44,40 @@
     <img src="src/assets/logo-header.jpg">
   </div>
 
-
-  <ng-template #first>
-    <columns-container>
-      <column grow>
-      </column>
-      <column [width]="800">
-        welcome to firedev.io
-      </column>
-      <column grow>
-      </column>
-    </columns-container>
-  </ng-template>
-
-
-
   <p header="normal">
-
-    <a href="javascript:void(0)"
-       [parent]="mainSlider"
-       gotoChildVerticalSlider="first">
-      Home
-    </a>
-
-    <a href="javascript:void(0)"
-       [parent]="mainSlider"
-       gotoChildVerticalSlider="second">
-      Docs
-    </a>
-
+    <ng-container [ngTemplateOutlet]="headerList"></ng-container>
   </p>
 
   <p header="scroll">
-
-    <a href="javascript:void(0)"
-       [parent]="mainSlider"
-       gotoChildVerticalSlider="first">
-      Home
-    </a>
-
-    <a href="javascript:void(0)"
-       [parent]="mainSlider"
-       gotoChildVerticalSlider="second">
-      Docs
-    </a>
-
+    <ng-container [ngTemplateOutlet]="headerList"></ng-container>
   </p>
 
   <div body>
 
     <layout-slider-vertical-child class="long"
-                                  [header]="'first'">
-      <ng-container [ngTemplateOutlet]="first"></ng-container>
+                                  [header]="'start'"
+                                  [fullScreen]="true">
+
+      start
+      <ng-container [ngTemplateOutlet]="first"> </ng-container>
     </layout-slider-vertical-child>
 
     <layout-slider-vertical-child class="long"
-                                  [header]="'second'">
+                                  [fullScreen]="true"
+                                  [header]="'video'">
       <h3>Second</h3>
     </layout-slider-vertical-child>
 
     <layout-slider-vertical-child class="long"
-                                  [header]="'third'">
-      <h3>third</h3>
+                                  [fullScreen]="true"
+                                  [header]="'docs'">
+      <h3>docs</h3>
+    </layout-slider-vertical-child>
+
+    <layout-slider-vertical-child class="long"
+                                  [fullScreen]="true"
+                                  [header]="'contact'">
+      <h3>contact</h3>
     </layout-slider-vertical-child>
 
   </div>

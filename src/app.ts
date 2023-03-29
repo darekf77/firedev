@@ -1,11 +1,16 @@
 //#region @notForNpm
 //#region imports
 import { Firedev } from 'firedev';
-const host = 'http://localhost:4199';
+import { AppController } from './app/shared/app/app.controller';
+import { App } from './app/shared/app/app';
+import { host } from './app/constants';
+
 //#region @browser
 import { NgModule, NgZone, ViewEncapsulation } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+
+
 
 //#endregion
 //#endregion
@@ -65,9 +70,11 @@ async function start() {
   const context = await Firedev.init({
     host,
     controllers: [
+      AppController,
       // PUT FIREDEV CONTORLLERS HERE
     ],
     entities: [
+      App,
       // PUT FIREDEV ENTITIES HERE
     ],
     //#region @websql

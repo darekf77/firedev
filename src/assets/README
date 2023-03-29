@@ -1,0 +1,292 @@
+<p style="text-align: center;"><img src="./logo-wide.jpg" ></p>
+<p>( BETA VERSION )</p>
+<p><strong>Firedev</strong> is a solution for
+<a href="https://www.typescriptlang.org/">typescript</a> /
+<a href="https://angular.io/">angular</a> /
+<a href="https://rxjs.dev/">rxjs</a> /
+<a href="https://ngrx.io/">ngrx</a> (optional) /
+<a href="https://nodejs.org/en/">nodejs</a> /
+<a href="https://typeorm.io/">typeorm</a>
+(<a href="https://www.mysql.com/">mysql</a> | <a href="https://github.com/WiseLibs/better-sqlite3">sqlite</a> | <a href="https://sql.js.org">sql.js</a>)</p>
+<p>backend/frontend apps.</p>
+<h1 id="requiredversionofnodejs">Required version of NodeJS</h1>
+<ul>
+<li>Windows (gitbash): &gt;= v16 </li>
+<li>MacOS: &gt;= v16</li>
+<li>Linux: &gt;= v16</li>
+</ul>
+<h1 id="howtoinstallfiredev">How to install firedev</h1>
+<pre><code>npm i -g firedev
+</code></pre>
+<h1 id="howtouninstallfiredevfromlocalmachine">How to uninstall firedev from local machine</h1>
+<p>Firedev stores a big global container (in ~/.firedev) for npm packages that are being shared
+accros all firedev apps</p>
+<pre><code>npm uninstall -g firedev
+rm -rf ~/.firedev
+</code></pre>
+<h1 id="philosophyoffiredev">Philosophy of Firedev</h1>
+<p>=&gt; One language for browser/backend/database - <strong>TypeScript</strong></p>
+<p>=&gt; Builded on top of rock solid frameworks</p>
+<p>=&gt; <strong>Never</strong> ever <strong>repeat</strong> single line of <strong>code</strong></p>
+<p>=&gt; Everything automatically generated, strongly typed</p>
+<p>=&gt; Crazy fast / developer-friendly coding in <b>Visual Studio Code</b></p>
+<p>=&gt; Shared <b>node_modules</b> for similar projects (from one big npm pacakges container)</p>
+<p>=&gt; No need for local node_modules =&gt; many projects takes magabytes instead gigabytes</p>
+<p>=&gt; Automation for releasing projects (standalone and organization) to github pages / npm repositories</p>
+<p>=&gt; Develop libraries and apps at the same time! (mixed NodeJs packages with proper Angular ivy packages)</p>
+<p>=&gt; Two development modes</p>
+<ol>
+<li>NORMAL - sqlite/mysql for database and normal NodeJS server</li>
+<li>WEBSQL - sql.js for database and server mock in browser (perfect for github pages, e2e and more!)</li>
+</ol>
+<h1 id="advantagesoffiredev">Advantages of Firedev</h1>
+<h2 id="1noseparationbetweenbackendandfrontendcodeusebeentityasfedto">1. No separation between backend and frontend code (use BE entity as FE dto!) .</h2>
+<ul>
+<li>this is a dream situation for any developer!</li>
+<li>perfect solution for any kind of projects ( hobbyst / freelancers / enterprise )</li>
+</ul>
+<p><b>example.ts</b></p>
+<pre><code class="ts language-ts">import { Firedev } from 'firedev';
+
+@Firedev.Entity()
+class User {
+  //#region @backend
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: string;
+}
+</code></pre>
+<p>your browser will get code below:</p>
+<pre><code class="ts language-ts">import { Firedev } from 'firedev/browser';
+
+@Firedev.Entity()
+class User {
+  /* */
+  /* */
+  /* */
+  id: string;
+}
+</code></pre>
+<h2 id="2additionalwebsqlmodeforwritingbackendinbrowser">2. Additional "Websql Mode" for writing backend in browser!</h2>
+<ul>
+<li>Instead running local server - run everything (db,backend) in browser thanks to sql.js/typeorm !</li>
+<li>This is possible ONLY in firedev with highest possible abstraction concepts</li>
+</ul>
+<p><b>example.ts</b></p>
+<pre><code class="ts language-ts">import { Firedev } from 'firedev';
+
+@Firedev.Entity()
+class User {
+  //#region @websql
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: string;
+}
+</code></pre>
+<p>your browser will get code below:</p>
+<pre><code class="ts language-ts">import { Firedev } from 'firedev/websql';
+
+
+@Firedev.Entity()
+class User {
+ //#region @websql
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: string;
+}
+</code></pre>
+<p>Database column is created on frontend! (sql.js)</p>
+<h2 id="3smoothrestapidefinehostonlyonceandnothingelse">3. Smooth REST api - define host only  once and nothing else!</h2>
+<ul>
+<li>no more of ugly acces to server… firedev takes it to next level !</li>
+<li>in Angular/RxJS environemtn =&gt; it more than pefect solution !</li>
+</ul>
+<p>user.controller.ts</p>
+<pre><code class="ts language-ts">@Firedev.Controller({
+  entity: User
+})
+class UserController {
+
+                      // name 'helloAmazingWorld' from this class function
+  @Firedev.Http.GET() // is being use for creating expressjs server routes
+  helloAmazingWorld():Firedev.Response&lt;string&gt; {
+    //region @backendFunc
+    return async () =&gt; {
+      return `hello world`;
+    };
+    //#endregion
+  }
+
+}
+</code></pre>
+<p>user.ts</p>
+<pre><code class="ts language-ts">@Firedev.Entity()
+class User {
+  static ctrl: UserController; // automatically injected
+  static helloAmazingWorld() {
+    return this.ctrl.helloAmazingWorld().received.observable;
+  }
+}
+</code></pre>
+<p>user.component.ts</p>
+<pre><code class="ts language-ts">@Component({
+  selector: 'app-user',
+  template: `
+  Message from user:  {{ userHello$ | async }}
+  `
+  ...
+})
+export class UserComponent implements OnInit {
+   userHello$ = User.helloAmazingWorld();
+   ...
+}
+</code></pre>
+<p>app.module.ts</p>
+<pre><code class="ts language-ts">const host = 'http://localhost:4444'; // host defined once
+
+const context = await Firedev.init({
+    host,
+    controllers: [UserController],
+    entities: [User],
+    //#region @backend
+    config // for database configuration
+    //#endregion
+    ...
+  });
+
+context.host // -&gt; available on backend and frontend !
+</code></pre>
+<h2 id="4crudapiin60seconds">4. CRUD api in 60 seconds</h2>
+<ul>
+<li>use observable or promises .. .whater you like</li>
+</ul>
+<pre><code class="ts language-ts">@Firedev.Entity()
+class Task {
+  //#region @backend
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: number;
+}
+
+@Firedev.Controlle({ entity: Task })
+export class TaskController extends Firedev.Base.Controller&lt;Task&gt;{ }
+
+@Component({
+  ...
+})
+export class TasksComponent implements OnInit {
+   constructor( tasksController: TaskController ) {  }
+
+  // .getAll(), getBy(), deleteById(), updateById() etc.
+  tasks$ = this.tasksController.getAll().received.observable.pipe(
+    map( response =&gt; response.body.json )
+  );
+}
+</code></pre>
+<h2 id="5supereasyrealtimesocketscommunication">5. Super easy realtime / sockets communication</h2>
+<ul>
+<li>realtime communication as simple as possible!
+task.ts</li>
+</ul>
+<pre><code class="ts language-ts">@Firedev.Entity()
+class Task {
+  static ctrl: TaskController; // automatically injected
+  //#region @backend
+  @Firedev.Orm.Column.Generated()
+  //#endregion
+  id: number;
+}
+</code></pre>
+<p>task.controller.ts</p>
+<pre><code class="ts language-ts">@Firedev.Controlle({ entity: Task })
+export class TaskController extends Firedev.Base.Controller&lt;Task&gt;{ }
+</code></pre>
+<p>task.component.ts</p>
+<pre><code class="ts language-ts">@Component({
+  ...
+})
+export class TasksComponent implements OnInit, OnDestroy {
+  $destroyed = new Subject();
+
+  @Input(); task: Task;
+  ngOnInit() {
+    Firedev.Realtime.Browser.listenChangesEntityObj(this.task).pipe(
+      takeUntil(this.$destroyed)
+      exhaustMap(()=&gt; {
+        return Tasks.ctrl.getBy(this.task.id).received.observable.pipe(
+          map( response =&gt; {
+            this.task = response.body.json;
+          })
+        )
+      })
+    );
+  }
+
+  ngOnDestroy() { // it will automatically unsubscribe from socket communication
+    this.$destroyed.next();
+    this.$destroyed.unsubscribe();
+  }
+
+}
+</code></pre>
+<h1 id="firedevcommands">Firedev commands</h1>
+<ol>
+<li>Create new standalone app</li>
+</ol>
+<pre><code>firedev new my-app
+</code></pre>
+<ol start="2">
+<li>Create new workspace app</li>
+</ol>
+<pre><code>firedev new workspace/app
+</code></pre>
+<ol start="3">
+<li>Release app to github pages and npm</li>
+</ol>
+<pre><code>firedev new my-workspace-with-apps/app
+</code></pre>
+<ol start="4">
+<li>Release app to github pages or/and npm</li>
+</ol>
+<pre><code>firedev release
+</code></pre>
+<ol start="3">
+<li>Update firedev from npm and local container from npm packages</li>
+</ol>
+<pre><code>firedev update
+</code></pre>
+<ol start="3">
+<li>Remove temporary files from repository / reset files content from main container</li>
+</ol>
+<pre><code>firedev clear
+</code></pre>
+<h1 id="qa">QA</h1>
+<h2 id="1howtocreatestartsingleproject">1. How to create/start single project</h2>
+<ul>
+<li>best for opensource/smaller projects</li>
+<li>can be deployed to github pages</li>
+<li>can be deployed to npm as organization package</li>
+</ul>
+<pre><code>firedev new my-app
+cd my-app
+firedev start
+# select proper debug task in  Visual Studio Code
+# press f5 in your Visual Studio Code
+</code></pre>
+<h2 id="2howtostartsmartworkspaceproject">2 How to start smart workspace project</h2>
+<ul>
+<li>best private/complex application</li>
+<li>can be deployed to github pages</li>
+<li>can be deployed to npm as organization package</li>
+</ul>
+<pre><code>firedev new my-workspace-with-apps/app
+cd new my-workspace-with-apps
+firedev star
+# select proper debug task in  Visual Studio Code
+# press f5 in your Visual Studio Code
+</code></pre>
+<h1 id="whatisinprogress">What is in progress</h1>
+<ul>
+<li>support for custom npm servers</li>
+<li>support for delopying on to server than github pages</li>
+</ul>
