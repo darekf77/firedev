@@ -43,9 +43,7 @@ const routes: Routes = [
 export class FiredevComponent implements OnInit {
   constructor(
     private ngZone: NgZone
-  ) {
-    document.title = ENV.title;
-  }
+  ) {  }
 
   async ngOnInit() {
     Firedev.initNgZone(this.ngZone);
