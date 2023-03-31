@@ -216,7 +216,7 @@ export class TaskController extends Firedev.Base.Controller<Task>{ }
 export class TasksComponent implements OnInit {
    constructor( tasksController: TaskController ) {  }
 
-  // .getAll(), getBy(), deleteById(), updateById() etc.
+  // .getAll(), getBy(), deleteById(), \ById() etc.
   tasks$ = this.tasksController.getAll().received.observable.pipe(
     map( response => response.body.json )
   );
@@ -293,7 +293,7 @@ firedev release
 
 3. Update firedev from npm and local container from npm packages
 ```
-firedev update
+firedev auto:update
 ```
 
 3. Remove temporary files from repository / reset files content from main container
