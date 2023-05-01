@@ -1,6 +1,6 @@
 {
   "name": "firedev",
-  "version": "13.1.96",
+  "version": "13.1.97",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
@@ -19,7 +19,7 @@
   "dependencies": {
     "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~13.1.184"
+    "tnp": "~13.1.188"
   },
   "license": "MIT",
   "private": false,
