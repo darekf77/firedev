@@ -15,7 +15,7 @@ backend/frontend apps.
 
 
 # Required version of NodeJS 
-- Windows (gitbash): >= v16 
+- Windows 10/11 (gitbash): >= v16 
 - MacOS: >= v16
 - Linux: >= v16
 
