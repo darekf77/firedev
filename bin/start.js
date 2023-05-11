@@ -27,7 +27,9 @@ global.spinnerInParentProcess = (procType === 'child-of-root');
 const orgArgv = JSON.parse(JSON.stringify(process.argv));
 global.tnpNonInteractive = (typeof process.argv.find(a => a.startsWith('--tnpNonInteractive')) !== 'undefined');
 const spinnerIsDefault = !tnpNonInteractive;
-global.frameworkName = 'firedev';
+const splited = crossPlatofrmPath(process.argv[1]).split('/');
+global.frameworkName = splited[splited.length - 1];
+
 global.restartWorker = (typeof (process.argv.find(a => a.startsWith('-restartWorker'))) !== 'undefined');
 global.reinitDb = (typeof (process.argv.find(a => a.startsWith('-reinitDb'))) !== 'undefined');
 global.globalSystemToolMode = true;
@@ -41,7 +43,7 @@ const verboseLevelExists = (typeof process.argv.find(a => a.startsWith('-verbose
 global.verboseLevel = (verboseLevelExists ? Number(
   process.argv.find(a => {
     const v = a.startsWith('-verbose=');
-    if(v) {
+    if (v) {
       return v.replace('-verbose=', '');
     }
   })
@@ -92,7 +94,7 @@ if (procType === 'child-of-root' || debugMode) {
 //   startSpinner = !isNodeDebuggerEnabled;
 // }
 
-if (frameworkName === 'tnp' || global.skipCoreCheck) {
+if (verbose || frameworkName === 'tnp' || global.skipCoreCheck) {
   startSpinner = false;
 }
 
@@ -146,7 +148,7 @@ if (startSpinner) {
   };
 
   const cwd = process.cwd();
-  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')} ${global.verbose ? '-verbose': ''} ${global.skipCoreCheck ? '--skipCoreCheck':''} `
+  const argsToCHildProc = (`${orgArgvForChild.slice(2).join(' ')} ${global.verbose ? '-verbose' : ''} ${global.skipCoreCheck ? '--skipCoreCheck' : ''} `
     + `${spinnerOnInArgs ? '-spinner' : (spinnerOffInArgs ? '-spinner=off' : '')} ${childprocsecretarg}`).split(' ');
 
   const proc = child_process.fork(crossPlatofrmPath(__filename), argsToCHildProc, {
@@ -169,7 +171,7 @@ if (startSpinner) {
     } else if (message === 'stop-spinner') {
       spinner.stop();
     } else if (message.startsWith('info::')) {
-      setText((message), true);
+      setText((message));
     } else if (message.startsWith('success::')) {
       setText((message));
     } else if (message.startsWith('taskstart::')) {
