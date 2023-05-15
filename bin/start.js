@@ -28,7 +28,7 @@ const orgArgv = JSON.parse(JSON.stringify(process.argv));
 global.tnpNonInteractive = (typeof process.argv.find(a => a.startsWith('--tnpNonInteractive')) !== 'undefined');
 const spinnerIsDefault = !tnpNonInteractive;
 const splited = crossPlatofrmPath(process.argv[1]).split('/');
-global.frameworkName = splited[splited.length - 1];
+global.frameworkName = 'firedev';
 
 global.restartWorker = (typeof (process.argv.find(a => a.startsWith('-restartWorker'))) !== 'undefined');
 global.reinitDb = (typeof (process.argv.find(a => a.startsWith('-reinitDb'))) !== 'undefined');
