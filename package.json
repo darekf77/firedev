@@ -19,7 +19,7 @@
   "dependencies": {
     "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~13.1.193"
+    "tnp": "~13.1.198"
   },
   "license": "MIT",
   "private": false,
@@ -145,7 +145,7 @@
     "firedev-ports": "~13.1.42",
     "firedev-storage": "~13.2.35",
     "firedev-typeorm": "~13.1.30",
-    "firedev-ui": "~13.1.23",
+    "firedev-ui": "~13.2.7",
     "fkill": "6.1.0",
     "font-awesome": "4.7.0",
     "form-data": "4.0.0",
@@ -192,7 +192,7 @@
     "mkdirp": "0.5.1",
     "mocha": "5.2.0",
     "moment": "2.22.2",
-    "morphi": "~13.2.9",
+    "morphi": "~13.2.10",
     "ng-in-viewport": "13.0.1",
     "ng-packagr": "13.0.0",
     "ng-talkback": "~13.1.19",
@@ -249,7 +249,6 @@
     "tnp-db": "~13.1.20",
     "tnp-helpers": "~13.1.37",
     "tnp-models": "~13.1.26",
-    "tnp-ui": "~13.1.27",
     "ts-debug": "1.3.0",
     "ts-loader": "2.3.1",
     "ts-node": "10.7.0",
