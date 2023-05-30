@@ -9,12 +9,15 @@
     "ignoreDepsPattern": [],
     "dependencies": {},
     "includeAsDev": [],
+
     "includeOnly": [
       'tnp',
       'tslib',
       'ora',
     ],
-    "linkedFolders": []
+
+    "linkedFolders": [],
+    'npmFixes': [],
   },
 
   "linkedProjects": [],

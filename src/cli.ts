@@ -4,7 +4,7 @@ import { start as tnpStartLocal } from 'tnp';
 
 let startFn = tnpStart;
 //#region @notForNpm
-startFn = tnpStartLocal;
+startFn = tnpStartLocal; // locally I wanna use compiled tnp code / inside minified versions
 //#endregion
 
 export const start = async (args, frameworkName, mode) => {
