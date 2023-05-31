@@ -222,13 +222,13 @@ if (startSpinner) {
     const distExist = fs.existsSync(pathToDistRun);
 
     if (distExist) {
-      console.log('USE /dist/cli.js')
+      // console.log('USE /dist/cli.js')
       mode = 'dist';
       !global.hideLog && setText('- firedev dist -', true);
       // TODO TOOOO MUCH TIME !!!!!!
       start = require(pathToDistRun.replace(/\.js$/g, '')).start;
     } else {
-      console.log('USE /cli.js')
+      // console.log('USE /cli.js')
       mode = 'npm';
       !global.hideLog && setText('- npm mode -', true);
       start = require(pathToIndexRun.replace(/\.js$/g, '')).start;
