@@ -1,6 +1,7 @@
-import { start as tnpStart } from 'tnp/cli';
-import { start as tnpStartLocal } from 'tnp';
-
+let tnpStart = require('tnp/cli').start;
+//#region @notForNpm
+let tnpStartLocal = require('tnp').start;
+//#endregion
 
 let startFn = tnpStart;
 //#region @notForNpm
