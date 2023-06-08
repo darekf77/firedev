@@ -33,7 +33,7 @@
 
   'smartContainerTarget': '',
   "type": "isomorphic-lib",
-  "version": "v3",
+  "version": "v4",
 
   "additionalNpmNames": [
     "firedev.io"

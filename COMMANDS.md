@@ -111,6 +111,8 @@ firedev minor
 # major relase
 firedev major:release
 firedev major
+
+firedev set:major:ver 14 # can be done in container for all pacakges
 ```
 
 ## Github pushing/puling projects
