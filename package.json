@@ -61,7 +61,7 @@
   "dependencies": {
     "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~16.0.6"
+    "tnp": "~16.0.7"
   },
   "license": "MIT",
   "private": false,
