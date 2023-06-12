@@ -61,7 +61,7 @@
   "dependencies": {
     "ora": "3.4.0",
     "tslib": "~2.3.0",
-    "tnp": "~16.0.7"
+    "tnp": "~16.0.12"
   },
   "license": "MIT",
   "private": false,
@@ -187,9 +187,9 @@
     "firedev-crud": "~16.0.53",
     "firedev-crud-deamon": "~16.0.43",
     "firedev-ports": "~16.0.48",
-    "firedev-storage": "~16.0.39",
+    "firedev-storage": "~16.0.40",
     "firedev-typeorm": "~16.0.37",
-    "firedev-ui": "~16.0.5",
+    "firedev-ui": "~16.0.6",
     "fkill": "6.1.0",
     "font-awesome": "4.7.0",
     "form-data": "4.0.0",
@@ -285,7 +285,7 @@
     "socket.io": "2.4.1",
     "sort-package-json": "1.11.0",
     "sql.js": "1.8.0",
-    "static-columns": "~16.0.3",
+    "static-columns": "~16.0.4",
     "string-similarity": "4.0.2",
     "sudo-block": "3.0.0",
     "sweetalert2": "11.7.12",
@@ -293,7 +293,7 @@
     "task.js": "0.1.5",
     "threads": "1.7.0",
     "tnp-cli": "~16.0.5",
-    "tnp-config": "~16.0.5",
+    "tnp-config": "~16.0.8",
     "tnp-core": "~16.0.9",
     "tnp-db": "~16.0.26",
     "tnp-helpers": "~16.0.5",
