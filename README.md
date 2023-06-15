@@ -4,6 +4,7 @@
 
 **Firedev** 🔥🔥🔥 is a solution for
 
+\+
 [typescript](https://www.typescriptlang.org/)  
 
 \+
@@ -15,15 +16,12 @@
 \+
 [nodejs](https://nodejs.org/en/)
 
-\+ [typeorm](https://typeorm.io/) 
-( 
+\+ [typeorm](https://typeorm.io/) :
 - [sqlite](https://github.com/WiseLibs/better-sqlite3) - SUPPORTED
 - [sql.js](https://sql.js.org) - SUPPORTED IN WEBSQL MODE
 - [mysql](https://www.mysql.com/) - support in progress
 - [postgress](https://www.postgresql.org) - support in progress
 - [mongo](https://www.postgresql.org) - support in progress
-
-)
 
 backend/frontend *isomorphic apps .
 
