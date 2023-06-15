@@ -1,17 +1,33 @@
-<p style="text-align: center;"><img src="./logo-wide.jpg" ></p>
+<p style="text-align: center;"><img src="./__images/logo-wide.jpg" ></p>
 
 ( BETA VERSION )
 
-**Firedev** is a solution for 
-[typescript](https://www.typescriptlang.org/) /
-[angular](https://angular.io/) / 
-[rxjs](https://rxjs.dev/) / 
-[ngrx](https://ngrx.io/) (optional) /
-[nodejs](https://nodejs.org/en/) / 
-[typeorm](https://typeorm.io/) 
-([mysql](https://www.mysql.com/) | [sqlite](https://github.com/WiseLibs/better-sqlite3) | [sql.js](https://sql.js.org))
+**Firedev** 🔥🔥🔥 is a solution for
 
-backend/frontend apps.
+[typescript](https://www.typescriptlang.org/)  
+
+\+
+[angular](https://angular.io/) 
+
+\+
+[rxjs](https://rxjs.dev/)  / [ngrx](https://ngrx.io/) (optional) 
+
+\+
+[nodejs](https://nodejs.org/en/)
+
+\+ [typeorm](https://typeorm.io/) 
+( 
+- [sqlite](https://github.com/WiseLibs/better-sqlite3) - SUPPORTED
+- [sql.js](https://sql.js.org) - SUPPORTED IN WEBSQL MODE
+- [mysql](https://www.mysql.com/) - support in progress
+- [postgress](https://www.postgresql.org) - support in progress
+- [mongo](https://www.postgresql.org) - support in progress
+
+)
+
+backend/frontend *isomorphic apps .
+
+\* means backend and frontend code is together
 
 
 # Required version of NodeJS 
@@ -19,17 +35,24 @@ backend/frontend apps.
 - MacOS: >= v16
 - Linux: >= v16
 
+(lower versions of nodejs are unofficialy 
+support for MacOS/Linux)
 # How to install firedev
 ```
 npm i -g firedev
 ```
+
+# How to install firedev Visual Studio Code extension
+Go to: https://marketplace.visualstudio.com/items?itemName=firedev.firedev-vscode-ext
+
+<p style="text-align: center;border: 1px solid black;"><img src="./__images/vscode-ext.png" ></p>
 
 #  How to uninstall firedev from local machine
 Firedev stores a big global container (in ~/.firedev) for npm packages that are being shared 
 accros all firedev apps
 ```
 npm uninstall -g firedev
-rm -rf ~/.firedev
+rm -rf ~/.firedev  # firedev local packages repository
 ```
 
 
@@ -47,9 +70,9 @@ rm -rf ~/.firedev
 
 => Shared <b>node_modules</b> for similar projects (from one big npm pacakges container)
 
-=> No need for local node_modules => many projects takes magabytes instead gigabytes
+=>**No need for local node_modules** => many projects takes magabytes instead gigabytes
 
-=> Automation for releasing projects (standalone and organization) to github pages / npm repositories
+=> Automation for releasing projects (standalone and organization) to github pages / npm repositories (github actions, dockers support comming soon)
 
 => Develop libraries and apps at the same time! (mixed NodeJs packages with proper Angular ivy packages)
 
@@ -61,6 +84,9 @@ rm -rf ~/.firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
 - this is a dream situation for any developer!
 - perfect solution for any kind of projects ( hobbyst / freelancers / enterprise )
+- CRAZY FAST business changes across database table and frontend 
+anduglar templates - CHECK!
+- code/database refactor at the same time!
 
 <b>example.ts</b>
 
@@ -124,7 +150,11 @@ class User {
 }
 
 ```
-Database column is created on frontend! (sql.js)
+Database columns are created on frontend (with sql.js) !
+
+<p style="text-align: center;"><img src="./__images/admin-mode.png" ></p>
+ Plus also you can set in *Firedev Admin Mode* if you prefere to 
+ clear database after each page refresh.
 
 
 ## 3. Smooth REST api - define host only  once and nothing else!
@@ -138,8 +168,10 @@ user.controller.ts
 })
 class UserController {
                       
-                      // name 'helloAmazingWorld' from this class function 
-  @Firedev.Http.GET() // is being use for creating expressjs server routes
+                      // name 'helloAmazingWorld' 
+                      // from this class function 
+                      // is being use for creating
+  @Firedev.Http.GET() // expressjs server routes 
   helloAmazingWorld():Firedev.Response<string> {  
     //region @backendFunc
     return async () => {
@@ -180,7 +212,7 @@ export class UserComponent implements OnInit {
 
 app.module.ts
 ```ts
-const host = 'http://localhost:4444'; // host defined once
+const host = 'http://localhost:4444'; // host defined once!
 
 const context = await Firedev.init({
     host,
@@ -196,7 +228,7 @@ context.host // -> available on backend and frontend !
 
 
 ```
-## 4. CRUD api in 60 seconds
+## 4. CRUD api in 60 seconds or less...
 - use observable or promises .. .whater you like
 ```ts
 @Firedev.Entity()
@@ -211,7 +243,7 @@ class Task {
 export class TaskController extends Firedev.Base.Controller<Task>{ } 
 
 @Component({
-  ...
+  // ...
 })
 export class TasksComponent implements OnInit {
    constructor( tasksController: TaskController ) {  }
@@ -273,32 +305,30 @@ export class TasksComponent implements OnInit, OnDestroy {
  ```
 
 # Firedev commands
-1. Create new standalone app
+1. Create new standalone app (simple project, cli tools)
+that can be relaased in npm as organization normal packages
+(example **my-standalone-app**)
 ```
-firedev new my-app
+firedev new my-standalone-app
 ```
-2. Create new workspace app
+2. Create new organization app (for complex projects)
+that can be released in npm as organization packages 
+(example **@organization/app**)
 ```
-firedev new workspace/app
-```
-3. Release app to github pages and npm
-```
-firedev new my-workspace-with-apps/app
+firedev new organization/app 
 ```
 
-4. Release app to github pages or/and npm
+3. Release app to github pages or/and npm
 ```
 firedev release
+
+firedev ar # quick patch release of lib to npm 
+firedev adr # quick release of app to github with last configuration
 ```
 
-3. Update firedev from npm and local container from npm packages
+4. Update firedev from npm and local container from npm packages
 ```
-firedev auto:update
-```
-
-3. Remove temporary files from repository / reset files content from main container
-```
-firedev clear
+firedev au  #  auto:update
 ```
 
 # QA
@@ -314,19 +344,30 @@ firedev start
 # press f5 in your Visual Studio Code
 ```
 
-## 2 How to start smart workspace project
+## 2 How to create/start organization project
 - best private/complex application
 - can be deployed to github pages
 - can be deployed to npm as organization package
 ```
 firedev new my-workspace-with-apps/app
 cd new my-workspace-with-apps
-firedev star
+firedev start
 # select proper debug task in  Visual Studio Code
 # press f5 in your Visual Studio Code
 ```
+<p style="text-align: center;"><img src="./__images/organization-debug.png" ></p>
+
+## 3 How to start project in WEBSQL MODE ?
+```
+firedev new my-organization-or-standalone-app
+cd new my-organization-or-standalone-app
+firedev start --websql
+```
+
 
 # What is in progress
-- support for custom npm servers
-- support for delopying on to server than github pages
+- support for auto-generated typeorm query selector
+- support for github actions
+- support for mysql/postgress/docker
+
 
