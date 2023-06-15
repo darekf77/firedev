@@ -332,6 +332,7 @@ firedev au  #  auto:update
 # Standalone project structure
 - *Organization project container* has many "small" **standalone projects** inside itself.
 - Standalone projects can be also use as global cli terminal tools
+- In ANY firedev project property "name" in package.json MUST be equal project's folder basename
 
 <p style="text-align: center;"><img src="./__images/code-structure.png" ></p>
 
