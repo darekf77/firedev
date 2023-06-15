@@ -24,7 +24,7 @@
 - [mongo](https://www.postgresql.org) - support in progress
 
 
-backend/frontend *isomorphic apps .
+backend/frontend [*isomorphic](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)  apps .
 
 
 # Required version of NodeJS 
