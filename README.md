@@ -372,6 +372,7 @@ firedev start --websql
 
 # What is in progress
 - support for auto-generated typeorm query selector
+- support for typeorm auto migrations
 - support for github actions
 - support for mysql/postgress/docker
 
