@@ -330,7 +330,7 @@ firedev au  #  auto:update
 ```
 
 # Standalone project structure
-- Organization projects container has many "small" **standalone projects** inside itself.
+- *Organization project container* has many "small" **standalone projects** inside itself.
 - Standalone projects can be also use as global cli terminal tools
 
 <p style="text-align: center;"><img src="./__images/code-structure.png" ></p>
