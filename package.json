@@ -3,7 +3,7 @@
     "resources": [
       "README.md",
       "bin",
-      "logo-wide.jpg"
+      "__images/logo-wide.jpg"
     ],
     "overrided": {
       "ignoreDepsPattern": [],
@@ -42,7 +42,7 @@
     "workerPlugins": {}
   },
   "name": "firedev",
-  "version": "16.1.1",
+  "version": "16.1.2",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
