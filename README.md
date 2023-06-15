@@ -71,20 +71,28 @@ rm -rf ~/.firedev  # firedev local packages repository
 
 => Develop libraries and apps at the same time! (mixed NodeJs packages with proper Angular ivy packages)
 
-=> Assets from projects can be shared with npm!
+=> Assets from project can be shared with npm package! (only those from **/src/assets/shared**)
 
 => Two development modes
   1. NORMAL - sqlite/mysql for database and normal NodeJS server
-  2. WEBSQL - sql.js for database and server mock in browser (perfect for github pages, e2e and more!)
+  2. WEBSQL - sql.js for database/server in browser development mode
 
+
+=> WEBSQL mode is a perfect solution for:
+
+*\+ github pages serverless demo apps with "almost" full functionality!* 
+
+*\+ e2e/integration tests*
+
+*\+ local NodeJS/database development without starting NodeJS server!*
 
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
 - this is a dream situation for any developer!
 - perfect solution for any kind of projects ( hobbyst / freelancers / enterprise )
-- CRAZY FAST business changes across database table and frontend 
-anduglar templates - CHECK!
-- code/database refactor at the same time!
+- CRAZY FAST business changes across database tables and frontend 
+Angular templates - CHECK!
+- frontend/backend/database code refactor at the same time!
 
 <b>example.ts</b>
 
@@ -111,6 +119,45 @@ class User {
   /* */
   /* */
   id: string;
+}
+
+```
+
+## Same thing applies in reverse to browser code
+
+<b>common.service.ts</b>
+
+```ts
+import { Firedev } from 'firedev';
+//@region @browser
+import { Injectable } from '@angular/core';
+//#endregion
+
+//@region @browser
+@Injectable()
+//#endregion
+class CommonService {
+  helloWorld() { 
+    console.log('Hello on backend and frontend')
+  }
+}
+
+```
+
+your backend will get code below:
+```ts
+import { Firedev } from 'firedev';
+/* */
+/* */
+/* */
+
+/* */
+/* */
+/* */
+class CommonService {
+  helloWorld() { 
+    console.log('Hello on backend and frontend')
+  }
 }
 
 ```
