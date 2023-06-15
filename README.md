@@ -52,8 +52,6 @@ npm uninstall -g firedev
 rm -rf ~/.firedev  # firedev local packages repository
 ```
 
-
-
 # Philosophy of Firedev
 => One language for browser/backend/database - **TypeScript**
 
@@ -73,9 +71,12 @@ rm -rf ~/.firedev  # firedev local packages repository
 
 => Develop libraries and apps at the same time! (mixed NodeJs packages with proper Angular ivy packages)
 
+=> Assets from projects can be shared with npm!
+
 => Two development modes
   1. NORMAL - sqlite/mysql for database and normal NodeJS server
   2. WEBSQL - sql.js for database and server mock in browser (perfect for github pages, e2e and more!)
+
 
 # Advantages of Firedev
 ## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
@@ -328,6 +329,13 @@ firedev adr # quick release of app to github with last configuration
 firedev au  #  auto:update
 ```
 
+# Standalone project structure
+- Organization projects container has many "small" **standalone projects** inside itself.
+- Standalone projects can be also use as global cli terminal tools
+
+<p style="text-align: center;"><img src="./__images/code-structure.png" ></p>
+
+
 # QA
 ## 1. How to create/start single project 
 - best for opensource/smaller projects
@@ -366,5 +374,4 @@ firedev start --websql
 - support for auto-generated typeorm query selector
 - support for github actions
 - support for mysql/postgress/docker
-
 
