@@ -2,7 +2,6 @@
   "resources": [
     "README.md",
     "bin",
-    "__images/logo-wide.jpg"
   ],
 
   "overrided": {

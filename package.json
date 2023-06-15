@@ -2,8 +2,7 @@
   "tnp": {
     "resources": [
       "README.md",
-      "bin",
-      "__images/logo-wide.jpg"
+      "bin"
     ],
     "overrided": {
       "ignoreDepsPattern": [],
@@ -42,7 +41,7 @@
     "workerPlugins": {}
   },
   "name": "firedev",
-  "version": "16.1.2",
+  "version": "16.1.3",
   "description": "Isomorphic solution for backend and frontend",
   "scripts": {},
   "bin": {
