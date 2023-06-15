@@ -40,7 +40,7 @@ const host = 'http://localhost:3000'
 const controllers: Firedev.Base.Controller<any>[] = [UserController as any];
 
 
-(async () => {
+const start = async () => {
 
   //#region @backend
   const config = {
@@ -80,11 +80,8 @@ const controllers: Firedev.Base.Controller<any>[] = [UserController as any];
 
   }
 
-})()
+};
 
-
-
-
-
+export default start;
 
 
