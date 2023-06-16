@@ -42,6 +42,9 @@ npm i -g firedev
 # How to install firedev Visual Studio Code extension
 Go to: https://marketplace.visualstudio.com/items?itemName=firedev.firedev-vscode-ext
 
+(WARNING before using *firedev-vscode-ext*, please at lease once 
+execute **any** command of **firedev** in your temrinal)
+
 <p style="text-align: center;border: 1px solid black;"><img src="./__images/vscode-ext.png" ></p>
 
 #  How to uninstall firedev from local machine
@@ -87,7 +90,8 @@ rm -rf ~/.firedev  # firedev local packages repository
 *\+ local NodeJS/database development without starting NodeJS server!*
 
 # Advantages of Firedev
-## 1. No separation between backend and frontend code (use BE entity as FE dto!) .
+## 1. No separation between backend and frontend code 
+- use BE entity as FE dto!
 - this is a dream situation for any developer!
 - perfect solution for any kind of projects ( hobbyst / freelancers / enterprise )
 - CRAZY FAST business changes across database tables and frontend 
@@ -123,7 +127,7 @@ class User {
 
 ```
 
-## Same thing applies in reverse to browser code
+## ..same thing applies in reverse to browser code
 
 <b>common.service.ts</b>
 
@@ -198,11 +202,13 @@ class User {
 Database columns are created on frontend (with sql.js) !
 
 <p style="text-align: center;"><img src="./__images/admin-mode.png" ></p>
- Plus also you can set in *Firedev Admin Mode* if you prefere to 
+
+Plus also you can set in *Firedev Admin Mode* if you prefere to 
  clear database after each page refresh.
 
 
-## 3. Smooth REST api - define host only  once and nothing else!
+## 3. Smooth REST api
+- define host only once for backend and frontend!
 - no more of ugly acces to server... firedev takes it to next level !
 - in Angular/RxJS environemtn => it more than pefect solution !
 
@@ -274,14 +280,20 @@ context.host // -> available on backend and frontend !
 
 ```
 ## 4. CRUD api in 60 seconds or less...
-- use observable or promises .. .whater you like
+- use observable or promises .. .whatever you like
 ```ts
 @Firedev.Entity()
 class Task {
+  ctrl: TaskController; // injected automatically
   //#region @backend
   @Firedev.Orm.Column.Generated()
   //#endregion
   id: number;
+
+  //#region @backend
+  @Firedev.Orm.Column.Column({ type: 'varchar', length: 100 })
+  //#endregion
+  content: string;
 }
 
 @Firedev.Controlle({ entity: Task })
@@ -291,12 +303,19 @@ export class TaskController extends Firedev.Base.Controller<Task>{ }
   // ...
 })
 export class TasksComponent implements OnInit {
-   constructor( tasksController: TaskController ) {  }
 
-  // .getAll(), getBy(), deleteById(), \ById() etc.
-  tasks$ = this.tasksController.getAll().received.observable.pipe(
+  // .getAll(), getBy(), deleteById(), create() etc.
+  tasks$ = Task.ctrl.getAll().received.observable.pipe(
     map( response => response.body.json )
   );
+
+  async ngOnInit() {
+    const data = await Task.ctrl.create( //
+      Task.from({  content: 'Hello' })
+    );
+
+    console.log(data); // http response with updated Task
+  }
 }
 
 ```
@@ -340,8 +359,8 @@ export class TasksComponent implements OnInit, OnDestroy {
       })
     );
   }
-
-  ngOnDestroy() { // it will automatically unsubscribe from socket communication
+                  // it will automatically 
+  ngOnDestroy() { //unsubscribe from socket communication
     this.$destroyed.next();
     this.$destroyed.unsubscribe();
   }
@@ -350,36 +369,42 @@ export class TasksComponent implements OnInit, OnDestroy {
  ```
 
 # Firedev commands
-1. Create new standalone app (simple project, cli tools)
+\+ Create new standalone app (simple project, cli tools or entry projects for big applications)
 that can be relaased in npm as organization normal packages
 (example **my-standalone-app**)
 ```
 firedev new my-standalone-app
 ```
-2. Create new organization app (for complex projects)
+---
+\+ Create new organization app (for complex projects)
 that can be released in npm as organization packages 
 (example **@organization/app**)
 ```
 firedev new organization/app 
 ```
-
-3. Release app to github pages or/and npm
+---
+\+ Release app to github pages or/and npm
 ```
 firedev release
 
 firedev ar # quick patch release of lib to npm 
 firedev adr # quick release of app to github with last configuration
 ```
-
-4. Update firedev from npm and local container from npm packages
+---
+\+ Update firedev from npm and local container from npm packages
 ```
 firedev au  #  auto:update
 ```
-
+---
+\+ Check firedev version
+```
+firedev version
+```
 # Standalone project structure
-- *Organization project container* has many "small" **standalone projects** inside itself.
+- **Organization project - smart container** has many "small" **standalone projects** inside itself.
 - Standalone projects can be also use as global cli terminal tools
 - In ANY firedev project property "name" in package.json MUST be equal project's folder basename
+- organization subprojects can be easily transformed to standalone projects just by taking them out of smart container
 
 <p style="text-align: center;"><img src="./__images/code-structure.png" ></p>
 
@@ -399,6 +424,13 @@ code my-app
 1.2. Start lib/app build in integrated terminal
 ```
 firedev start
+
+# OR to start separated build of app and lib project parts
+firedev bw     # it will start lib build from ./src/lib  
+firedev baw    # it will start app build from ./src/app*
+
+# bw => build:watch
+# baw => build:app:watch
 ```
 
 1.3. Select proper debug task in  Visual Studio Code
@@ -418,7 +450,15 @@ code new my-organization-with-apps
 
 2.2. Start lib/app build in integrated terminal
 ```
-firedev start
+firedev start  # it will start lib/app build for default project
+
+// OR if you want to deveop many projects at the same time
+firedev bw                       # to start global build
+firedev baw  child-name          # to start app build of child
+firedev baw  second-child-name   # to start app build of child
+
+# bw => build:watch
+# baw => build:app:watch
 ```
 2.3. Select proper debug task in  Visual Studio Code
 
@@ -437,6 +477,7 @@ firedev start --websql
 # What is in progress ?
 - support for auto-generated typeorm query selector
 - support for typeorm auto migrations
+- support for integrated cms / file manager 
 - support for github actions
 - support for mysql/postgress/docker
 - support for personal cloud
