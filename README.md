@@ -68,7 +68,7 @@ rm -rf ~/.firedev  # firedev local packages repository
 
 => Shared <b>node_modules</b> for similar projects (from one big npm pacakges container)
 
-=>**No need for local node_modules** => many projects takes magabytes instead gigabytes
+=>**No need for local node_modules** => many projects takes megabytes instead gigabytes
 
 => Automation for releasing projects (standalone and organization) to github pages / npm repositories (github actions, dockers support comming soon)
 
