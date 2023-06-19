@@ -27,13 +27,13 @@
 backend/frontend [*isomorphic](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)  apps .
 
 
-# Required version of NodeJS 
+# Required version of NodeJS** 
 - Windows 10/11 (gitbash): >= v16 
 - MacOS: >= v16
 - Linux: >= v16
 
-(lower versions of nodejs are unofficialy 
-support for MacOS/Linux)
+*lower versions of NodeJS are unofficialy 
+support for MacOS/Linux
 # How to install firedev
 ```
 npm i -g firedev
@@ -370,7 +370,7 @@ export class TasksComponent implements OnInit, OnDestroy {
 
 # Firedev commands
 \+ Create new standalone app (simple project, cli tools or entry projects for big applications)
-that can be relaased in npm as organization normal packages
+that can be relaased in npm as normal packages
 (example **my-standalone-app**)
 ```
 firedev new my-standalone-app
@@ -378,9 +378,13 @@ firedev new my-standalone-app
 ---
 \+ Create new organization app (for complex projects)
 that can be released in npm as organization packages 
-(example **@organization/app**)
+(example **@organization/my-app-or-lib **)
 ```
-firedev new organization/app 
+firedev new organization/my-app-or-lib 
+
+# and then you can add another one:
+
+firedev new organization/my-next-app-lib
 ```
 ---
 \+ Release app to github pages or/and npm
@@ -400,8 +404,8 @@ firedev au  #  auto:update
 ```
 firedev version
 ```
-# Standalone project structure
-- **Organization project - smart container** has many "small" **standalone projects** inside itself.
+# Standalone/Organization project structure
+- **Organization project (smart container)** has many "small" **standalone projects** inside itself.
 - Standalone projects can be also use as global cli terminal tools
 - In ANY firedev project property "name" in package.json MUST be equal project's folder basename
 - organization subprojects can be easily transformed to standalone projects just by taking them out of smart container
@@ -475,7 +479,7 @@ firedev start --websql
 
 
 # What is in progress ?
-- support for auto-generated typeorm query selector
+- support for auto-generated typeorm query selector (almost done)
 - support for typeorm auto migrations
 - support for integrated cms / file manager 
 - support for github actions
