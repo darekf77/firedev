@@ -78,7 +78,13 @@ rm -rf ~/.firedev  # firedev local packages repository
 
 => Two development modes
   1. NORMAL - sqlite/mysql for database and normal NodeJS server
+  ```
+  firedev start # in any project
+  ```
   2. WEBSQL - sql.js for database/server in browser development mode
+  ```
+  firedev start --websql  # in any project
+  ```
 
 
 => WEBSQL mode is a perfect solution for:
@@ -199,11 +205,11 @@ class User {
 }
 
 ```
-Database columns are created on frontend (with sql.js) !
+Database columns can be created in browser/frontend with sql.js !
 
 <p style="text-align: center;"><img src="./__images/admin-mode.png" ></p>
 
-Plus also you can set in *Firedev Admin Mode* if you prefere to 
+\+ also you can set in *Firedev Admin Mode* if you prefere to 
  clear database after each page refresh.
 
 
