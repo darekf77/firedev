@@ -401,9 +401,16 @@ firedev ar # quick patch release of lib to npm
 firedev adr # quick release of app to github with last configuration
 ```
 ---
+
+\+ Synchronize latest global firedev's packages container
+```
+firedev sync
+```
 \+ Update firedev from npm and local container from npm packages
 ```
 firedev au  #  auto:update
+
+# above command will also perform "firedev sync" 
 ```
 ---
 \+ Check firedev version
