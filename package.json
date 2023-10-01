@@ -64,7 +64,7 @@
   },
   "license": "MIT",
   "private": false,
-  "lastBuildTagHash": "21749021bd37e0c764c0a0f9bcfac393beff5282",
+  "lastBuildTagHash": "59ae92054bf4cf872fb4a0509621bf7acd948688",
   "devDependencies": {
     "@angular-devkit/build-angular": "~16.0.5",
     "@angular-devkit/core": "~16.0.5",
