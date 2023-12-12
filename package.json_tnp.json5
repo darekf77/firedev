@@ -13,7 +13,6 @@
       'tnp',
       'tslib',
       'ora',
-      "@parcel/watcher",
     ],
 
     "linkedFolders": [],
