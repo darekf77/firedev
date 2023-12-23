@@ -1,6 +1,6 @@
 //#region @notForNpm
 //#region imports
-import { Firedev } from 'firedev';
+import { Firedev } from 'firedev/src';
 import { AppController } from './app/shared/app/app.controller';
 import { App } from './app/shared/app/app';
 import { host } from './app/constants';

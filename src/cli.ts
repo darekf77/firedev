@@ -1,6 +1,6 @@
-let tnpStart = require('tnp/cli').start;
+let tnpStart = require('tnp/cli/src').start;
 //#region @notForNpm
-let tnpStartLocal = require('tnp').start;
+let tnpStartLocal = require('tnp/src').start;
 //#endregion
 
 let startFn = tnpStart;

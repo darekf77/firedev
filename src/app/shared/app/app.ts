@@ -1,5 +1,5 @@
-import { Firedev } from 'firedev';
-import { _ } from 'tnp-core';
+import { Firedev } from 'firedev/src';
+import { _ } from 'tnp-core/src';
 import type { AppController } from './app.controller';
 
 @Firedev.Entity({

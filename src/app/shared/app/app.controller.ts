@@ -1,8 +1,8 @@
-import { Firedev } from 'firedev';
+import { Firedev } from 'firedev/src';
 import { App } from './app';
 import axios from 'axios';
 import { host } from '../../constants';
-import { Helpers } from 'tnp-core';
+import { Helpers } from 'tnp-core/src';
 
 
 @Firedev.Controller({
