@@ -50,7 +50,6 @@
     ".npmignore": true,
     ".babelrc": true,
     "package.json_devDependencies.json": true,
-    "docs": true,
     "logo.svg": true,
     "package.json_tnp.json": true
   },
@@ -68,5 +67,10 @@
   "workbench.colorTheme": "Default Light+",
   "tslint.autoFixOnSave": true,
   "eslint.enable": false,
-  "tslint.enable": false
+  "tslint.enable": false,
+  "search.exclude": {
+    "docs": true,
+    "projects": true,
+    "bin": true
+  }
 }
