@@ -14,6 +14,7 @@
       'tslib',
       'ora',
       '@parcel/watcher',
+      'socket.io',
     ],
 
     "linkedFolders": [],
