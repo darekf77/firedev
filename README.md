@@ -35,7 +35,7 @@
 <br>
 
 ### Projects that are part of firedev:
-- tnp https://github.com/darekf77/tnp (no opensource yet)
+- tnp https://github.com/darekf77/tnp (no opensource yet - code refactor needed)
     + main cli
 - firedev-core https://github.com/darekf77/tnp-core
     + essential/core helpers for all projects
@@ -61,8 +61,6 @@
     + easy rest api
 - firedev-incremental-watcher https://github.com/darekf77/incremental-compiler
     + abstraction for incremental builders NodeJS based 
-- firedev-storage https://github.com/darekf77/firedev-storage
-    + ts decorators based storage solution
 - firedev-storage https://github.com/darekf77/firedev-storage
     + ts decorators based storage solution
 - firedev-walk-object https://github.com/darekf77/lodash-walk-object
